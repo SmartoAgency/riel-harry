@@ -1,0 +1,203 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'project'
+    var id_page = 'home'
+    var class_page = 'home '
+    var plannings = [
+      {
+        title: 'Студія',
+        area: '30',
+        price: '97 000',
+        img: './assets/images/test-plan.png',
+        dataset: 'rooms-studio'
+      },
+      {
+        title: '1-кімнатне',
+        area: '35',
+        price: '110 000',
+        img: './assets/images/test-plan.png',
+        dataset: 'rooms-1-bedroom'
+        
+      },
+      {
+        title: '2-кімнатне',
+        area: '70',
+        price: '196 000',
+        img: './assets/images/test-plan.png',
+        dataset: 'rooms-2-bedroom'
+      }
+
+    ]
+
+block meta
+  title= 'Riel Harry'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/home.bundle.js')
+block content
+  .front-screen
+    .container
+      .front-screen__content
+        h1.front-screen__title.color-green.d-fz-120.line-h-115.mob-fz-53.text-uppercase
+          span.fw-900 Harry 
+          | — дім з характером
+        a(href="http://google.com", target="_blank", rel="noopener noreferrer").front-screen__adress.color-white-2.d-fz-21.mob-fz-18
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.1833 7.54166C16.3083 3.69166 12.95 1.95833 9.99996 1.95833C9.99996 1.95833 9.99996 1.95833 9.99162 1.95833C7.04996 1.95833 3.68329 3.68333 2.80829 7.53333C1.83329 11.8333 4.46662 15.475 6.84996 17.7667C7.73329 18.6167 8.86662 19.0417 9.99996 19.0417C11.1333 19.0417 12.2666 18.6167 13.1416 17.7667C15.525 15.475 18.1583 11.8417 17.1833 7.54166ZM9.99996 11.7167C8.54996 11.7167 7.37496 10.5417 7.37496 9.09166C7.37496 7.64166 8.54996 6.46666 9.99996 6.46666C11.45 6.46666 12.625 7.64166 12.625 9.09166C12.625 10.5417 11.45 11.7167 9.99996 11.7167Z" fill="#F2FFE6"/>
+          </svg>
+          span м. Львів, вул. Cтороженка 25А
+        a(href="#plannings" type="button" data-popup-form-planning-open).button.front-screen__button
+          span Обрати помешкання
+        a(href="http://riel.ua", target="_blank", rel="noopener noreferrer").front-screen__logo
+          include ../components/developer-logo.pug
+    img(src="./assets/images/front-screen-img.jpg", alt="", srcset="").front-screen__img
+    .front-screen__bottom-wrap.container
+      .front-screen__bottom-info.color-white-2
+        .front-screen__bottom-info-group
+          div.d-fz-21.mob-fz-21.front-screen__bottom-info-title Помешкання
+          div.d-fz-21.mob-fz-18.front-screen__bottom-info-title.d-fz-21.line-h-140
+            div 25 квартир
+            div 26 помешкань
+        .front-screen__bottom-info-group
+          div.d-fz-28.mob-fz-21.front-screen__bottom-info-title 
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="8" fill="#FF9271"/>
+            </svg>
+            span Здача
+          div.d-fz-21.mob-fz-18.line-h-140 1 квартал 2028 року
+  .about-and-plannings
+    img.about-and-plannings__bg(src="./assets/images/about-and-plannings-bg.svg")
+    .about(id="about")
+      .container.color-white
+        .about__content
+          .about__title.color-green.d-fz-62.mob-fz-32.text-uppercase(data-split-lines) Про проєкт
+          .about__text
+            p.d-fz-24.mob-fz-16(data-split-lines) Harry народився для тих, хто вже знає, хто вони є. У світі, де кожен намагається вписати тебе у свій шаблон, Harry не йде на компроміси із собою. Це будинок, що витримає твої амбіції. 
+            p.d-fz-24.mob-fz-16(data-split-lines)  Будинок з характером, де історична форма оживає у сучасній реновації, даруючи відчуття справжнього дому тим, хто цінує традицію і комфорт.
+          .about__img
+            .about__img-wrap
+              <svg data-play-video="about-video" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M63.2399 25.7401V46.26C63.2399 49.62 61.44 52.7401 58.53 54.4501L40.71 64.7401C37.8 66.4201 34.2 66.4201 31.26 64.7401L13.44 54.4501C10.53 52.7701 8.72998 49.65 8.72998 46.26V25.7401C8.72998 22.3801 10.53 19.26 13.44 17.55L31.26 7.26C34.17 5.58 37.77 5.58 40.71 7.26L58.53 17.55C61.44 19.26 63.2399 22.3501 63.2399 25.7401Z" fill="white" fill-opacity="0.24" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M29.25 36.0001V32.4C29.25 27.78 32.52 25.8901 36.51 28.2001L39.63 30.0001L42.75 31.8C46.74 34.11 46.74 37.8901 42.75 40.2001L39.63 42.0001L36.51 43.8C32.52 46.11 29.25 44.2201 29.25 39.6001V36.0001Z" fill="white" fill-opacity="0.24" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              video(controls playsinline src="https://forest-2-wp.smarto.agency/wp-content/uploads/2025/03/home-video.mp4" poster="./assets/images/about-poster.jpg" data-video="about-video")
+    .plannings(id="plannings")
+      .container
+        .plannings__content
+          .plannings__title.color-green.d-fz-62.mob-fz-32.text-uppercase 
+            div(data-split-lines) Оберіть Характер 
+            div(data-split-lines) життя
+          .swiper-container(data-plannings-slider)
+            .show-on-mobile.slider-navigation
+              button(type="button" data-plannings-slider-prev).slider-navigation__button
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3198 9.38L9.75982 11.94L12.3198 14.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 11.9399L9.83 11.9399" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 20C7.58 20 4 17 4 12C4 7 7.58 4 12 4" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              button(type="button" data-plannings-slider-next).slider-navigation__button
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6799 14.62L14.2399 12.06L11.6799 9.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 12.0601H14.17" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            .swiper-wrapper
+              each val in plannings
+                .flat-card.swiper-slide
+                  .flat-card__img
+                    .flat-card__img-wrap
+                      img(src=val.img, alt="", srcset="" loading="lazy")
+                  div.flat-card__top1.d-fz-21.mob-fz-18.default-font2 #{val.title}
+                  div.flat-card__top2.d-fz-16 від #{val.area}м²
+                  .flat-card__bottom
+                    div.d-fz-14.line-h-150.mob-fz-14 Ціна від
+                    div.d-fz-24.line-h-150.mob-fz-21 $ #{val.price} 
+                  button(type="button" data-popup-form-planning-open data-plannings-popup-checkbox=val.dataset).button2.default-font2
+                    span Детальніше
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                      <path d="M5.72083 2.88012L9.52416 6.68345C9.97333 7.13262 9.97333 7.86762 9.52416 8.31678L5.72083 12.1201" stroke="#072D2B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+          button(type="button" data-popup-form-planning-open).button
+            span Підібрати помешкання
+  .slides.slides--iframe
+    .container
+      .slides__content
+        .slides__title.d-fz-70.line-h-110.mob-fz-32.color-darkgreen.text-uppercase
+          span уявіть життя в&nbsp;
+          span.fw-900 harry
+        .swiper-container(data-slides-slider)
+          .slider-navigation
+            button(type="button" data-slides-slider-prev).slider-navigation__button
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.3198 9.38L9.75982 11.94L12.3198 14.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20 11.9399L9.83 11.9399" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 20C7.58 20 4 17 4 12C4 7 7.58 4 12 4" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            button(type="button" data-slides-slider-next).slider-navigation__button
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6799 14.62L14.2399 12.06L11.6799 9.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 12.0601H14.17" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          .swiper-wrapper
+            .swiper-slide
+              .slides__img
+                <iframe title="VR Tour" height="100%" width="100%" frameborder="0" data-src="https://vrnet.io/view5.16a/?model=ua/riel/HydePark/ext-p3"   allowfullscreen></iframe>
+            .swiper-slide
+              .slides__img
+                <iframe title="VR Tour" height="100%" width="100%" frameborder="0" data-src="https://ua-maps3d.vrnet.io/view5.16a/?model=ua/riel/HydePark/ext-p2"  allowfullscreen></iframe>
+            .swiper-slide
+              .slides__img
+                <iframe title="VR Tour" height="100%" width="100%" frameborder="0" data-src="https://vrnet.io/view5.16a/?model=ua/riel/HydePark/mzk"  allowfullscreen></iframe>
+  .slides.slides--white
+    .container
+      .slides__content
+        .slides__title.d-fz-70.line-h-110.mob-fz-32.color-darkgreen.text-uppercase
+          span вид з&nbsp;
+          span.fw-900 harry
+        .swiper-container(data-slides2-slider)
+          .slider-navigation
+            button(type="button" data-slides2-slider-prev).slider-navigation__button
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.3198 9.38L9.75982 11.94L12.3198 14.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20 11.9399L9.83 11.9399" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 20C7.58 20 4 17 4 12C4 7 7.58 4 12 4" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            button(type="button" data-slides2-slider-next).slider-navigation__button
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6799 14.62L14.2399 12.06L11.6799 9.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 12.0601H14.17" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          .swiper-wrapper
+            .swiper-slide
+              .slides__img
+                img(src="./assets/images/life-in-harry/3.jpg", alt="", srcset="")
+            .swiper-slide
+              .slides__img
+                img(src="./assets/images/life-in-harry/1.jpg", alt="", srcset="")
+            .swiper-slide
+              .slides__img
+                img(src="./assets/images/life-in-harry/2.jpg", alt="", srcset="")
+  .advanrages-and-characteristics
+    img(src='./assets/images/advantages-and-characteristics-bg.svg').advanrages-and-characteristics__bg
+    include ../includes/b_advantages.pug
+    include ../includes/b_characteristics.pug
+  include ../includes/b_parking.pug
+  include ../includes/b_gallery.pug
+  include ../includes/b_construction.pug
+  include ../includes/b_news.pug
+  include ../includes/b_developer.pug
+  include ../includes/b_contacts.pug
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

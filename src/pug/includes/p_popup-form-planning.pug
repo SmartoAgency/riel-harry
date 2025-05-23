@@ -1,0 +1,85 @@
+-
+  var roomCheckboxes = [
+    { name: 'rooms-1-bedroom', value: '1-bedroom', label: '1 Спальня' },
+    { name: 'rooms-2-bedroom', value: '2-bedrooms', label: '2 Спальні' }
+  ]
+
+  var featuresCheckboxes = [
+    { name: 'features-view', value: 'view', label: 'Вид' },
+    { name: 'features-sunny-side', value: 'sunny-side', label: 'Сонячна/не сонячна сторона' },
+    { name: 'features-large-kitchen', value: 'large-kitchen', label: 'Велика кухня, кухня об’єднана з вітальнею' },
+    { name: 'features-2-3-bathrooms', value: '2-bathrooms', label: '2 санвузли' },
+    { name: 'features-walk-in-closet', value: 'wardrobe', label: 'Гардеробна' },
+    { name: 'features-not-top-floor', value: 'not-top-floor', label: 'Не останній поверх' },
+  ]
+.popup-form-planning(data-lenis-prevent data-popup-form-planning)
+  <svg data-popup-form-planning-close class="popup-form-planning__close"  width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.25 29.75L29.75 12.25" stroke="#F2FFE6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M29.75 29.75L12.25 12.25" stroke="#F2FFE6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  .popup-form-planning__content
+    .popup-form-planning__title.color-green.d-fz-42.mob-fz-32.text-uppercase
+      span Підбір помешкання
+    .popup-form-planning__form-wrap.default-font2
+      form.popup-form-planning__form(data-plannings-form)
+        .popup-form-planning__form-top
+          .popup-form-planning__back-link(data-popup-form-planning-close)
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.0596 3.22003L5.7129 7.5667C5.19957 8.08003 5.19957 8.92003 5.7129 9.43336L10.0596 13.78" stroke="rgba(242,255,230,1)" stroke-opacity="0.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            span Повернутися до планувань
+        .popup-form-planning__form-left
+          img(src="./assets/images/plannings/studio.jpg", alt="", srcset="")
+        .popup-form-planning__form-right
+          .popup-form-planning__group
+            .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Яка кількість кімнат вам потрібна?
+            each val in roomCheckboxes
+              label.checkbox-with-label
+                input(type="checkbox" name=val.name value=val.value)
+                .checkbox-with-label__checkbox
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <rect y="0.5" width="24" height="24" fill="#0273CF"/>
+                    <path d="M8 12.4873L10.5127 15L15.9189 10" stroke="#F8F7F3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                .checkbox-with-label__label= val.label
+            .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Який у вас бюджет?
+            <input data-form-planning-range data-range-change-from="budget-from" data-prefix="$ " data-step="1000" data-range-change-to="budget-to" name="budget" data-min="95000" data-max="200000" data-from="110000" data-to="150000">
+            input(type="hidden", name="budget-from")
+            input(type="hidden", name="budget-to")
+            .popup-form-planning__group
+          .popup-form-planning__group
+            .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Яка площа м² ?
+            <input data-form-planning-range data-range-change-from="area-from" data-range-change-to="area-to" name="area" data-min="30" data-max="75" data-from="40" data-to="50">
+            input(type="hidden", name="area-from")
+            input(type="hidden", name="area-to")
+            .popup-form-planning__group
+            .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Що має бути у помешканні?
+
+            each val in featuresCheckboxes
+              label.checkbox-with-label
+                input(type="checkbox" name=val.name value=val.value)
+                .checkbox-with-label__checkbox
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <rect y="0.5" width="24" height="24" fill="#0273CF"/>
+                    <path d="M8 12.4873L10.5127 15L15.9189 10" stroke="#F8F7F3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                .checkbox-with-label__label= val.label
+          .popup-form-planning__group
+            .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Для кого обираєте помешкання? 
+            select(name="for-whom").select
+              option(value="for-myself") Для себе
+              option(value="for-my-family") Для своєї родини
+              option(value="for-my-friend") Для батьків
+              option(value="for-my-friend") Для дітей
+              option(value="for-my-friend") Інвестую в нерухомість
+          .popup-form-planning__bottom
+            .popup-form-planning__bottom-title.d-fz-32.color-white-2.mob-fz-24 Контакти
+            .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive").first-offset
+              input(type='text' name="name" placeholder="Ваше ім’я:").form-field__input.color-text
+              .input-message(data-input-message)
+            .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+              input(type='text' name="phone" placeholder="Телефон:").form-field__input.color-text
+              .input-message(data-input-message)
+            button(type="submit" data-btn-submit="data-btn-submit").button 
+              span(data-btn-submit-text) Залишити заявку

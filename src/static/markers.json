@@ -1,0 +1,173 @@
+{
+    "data": [
+        {
+            "id": 267,
+            "active": true,
+            "current": {
+                "id": 799,
+                "name": "Дитячий садок №132",
+                "address": null,
+                "language": "uk",
+                "__typename": "infrastructure_object_translates"
+            },
+            "position": 259,
+            "latitude": "49.83976075136693",
+            "longitude": "24.058690388614856",
+            "infrastructureCategoryObject": {
+                "id": 158,
+                "icon": "icon-04",
+                "__typename": "infrastructure_category_object"
+            },
+            "image": [],
+            "__typename": "infrastructure_object"
+        },
+        {
+            "id": 268,
+            "active": true,
+            "current": {
+                "id": 802,
+                "name": "Школа №63",
+                "address": null,
+                "language": "uk",
+                "__typename": "infrastructure_object_translates"
+            },
+            "position": 260,
+            "latitude": "49.837425424023664",
+            "longitude": "24.0632191460428",
+            "infrastructureCategoryObject": {
+                "id": 155,
+                "icon": "icon-01",
+                "__typename": "infrastructure_category_object"
+            },
+            "image": [],
+            "__typename": "infrastructure_object"
+        },
+        {
+            "id": 269,
+            "active": true,
+            "current": {
+                "id": 805,
+                "name": "Школа №70",
+                "address": null,
+                "language": "uk",
+                "__typename": "infrastructure_object_translates"
+            },
+            "position": 261,
+            "latitude": "49.84083323427774",
+            "longitude": "24.06689472659121",
+            "infrastructureCategoryObject": {
+                "id": 155,
+                "icon": "icon-01",
+                "__typename": "infrastructure_category_object"
+            },
+            "image": [],
+            "__typename": "infrastructure_object"
+        },
+        {
+            "id": 270,
+            "active": true,
+            "current": {
+                "id": 808,
+                "name": "Ресторан «Роден»",
+                "address": null,
+                "language": "uk",
+                "__typename": "infrastructure_object_translates"
+            },
+            "position": 262,
+            "latitude": "49.837470401763646",
+            "longitude": "24.060558551894488",
+            "infrastructureCategoryObject": {
+                "id": 156,
+                "icon": "icon-02",
+                "__typename": "infrastructure_category_object"
+            },
+            "image": [],
+            "__typename": "infrastructure_object"
+        },
+        {
+            "id": 271,
+            "active": true,
+            "current": {
+                "id": 811,
+                "name": "Аптека",
+                "address": null,
+                "language": "uk",
+                "__typename": "infrastructure_object_translates"
+            },
+            "position": 263,
+            "latitude": "49.8384426026868",
+            "longitude": "24.05611152105056",
+            "infrastructureCategoryObject": {
+                "id": 162,
+                "icon": "icon-08",
+                "__typename": "infrastructure_category_object"
+            },
+            "image": [],
+            "__typename": "infrastructure_object"
+        },
+        {
+            "id": 273,
+            "active": true,
+            "current": {
+                "id": 817,
+                "name": "Супермаркет SPAR",
+                "address": null,
+                "language": "uk",
+                "__typename": "infrastructure_object_translates"
+            },
+            "position": 265,
+            "latitude": "49.83729741022703",
+            "longitude": "24.06188380583408",
+            "infrastructureCategoryObject": {
+                "id": 159,
+                "icon": "icon-05",
+                "__typename": "infrastructure_category_object"
+            },
+            "image": [],
+            "__typename": "infrastructure_object"
+        },
+        {
+            "id": 274,
+            "active": true,
+            "current": {
+                "id": 820,
+                "name": "Кінотеатр",
+                "address": null,
+                "language": "uk",
+                "__typename": "infrastructure_object_translates"
+            },
+            "position": 266,
+            "latitude": "49.83830421228952",
+            "longitude": "24.058466315793158",
+            "infrastructureCategoryObject": {
+                "id": 156,
+                "icon": "icon-02",
+                "__typename": "infrastructure_category_object"
+            },
+            "image": [],
+            "__typename": "infrastructure_object"
+        },
+        {
+            "id": 275,
+            "active": true,
+            "current": {
+                "id": 823,
+                "name": "Парк «Шевченківський Гай»",
+                "address": null,
+                "language": "uk",
+                "__typename": "infrastructure_object_translates"
+            },
+            "position": 267,
+            "latitude": "49.84245921137954",
+            "longitude": "24.059320162817563",
+            "infrastructureCategoryObject": {
+                "id": 161,
+                "icon": "icon-07",
+                "__typename": "infrastructure_category_object"
+            },
+            "image": [],
+            "__typename": "infrastructure_object"
+        }
+    ],
+    "__typename": "infrastructure_objectPagination"
+}

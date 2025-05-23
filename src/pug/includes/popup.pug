@@ -1,0 +1,43 @@
+include ./p_popup-form-planning.pug
+.form-success-popup(data-lenis-prevent data-form-success-popup)
+  .form-success-popup__bg
+  .form-success-popup__content
+    .form-success-popup__close(data-form-success-popup-close data-callback-popup-close)
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <rect x="0" y="0" width="24" height="24" fill="none"/>
+        <path d="M7 17L17 7" stroke="#031915" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 17L7 7" stroke="#031915" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    .d-fz-24.color-darkblue.form-success-popup__title.mob-fz-18 Дякуємо! Ми зв'яжемося з вами найближчим часом. Гарного дня!
+    button(type="button" data-form-success-popup-close data-callback-popup-close).button2.button2--blue На головну
+#callbackPopup.popup-overlay(data-lenis-prevent data-callback-popup)
+  .popup-content
+    .popup-content__logo
+      img(src="./assets/images/form-logo.png", alt="logo")
+    img(src="./assets/images/form-bg.jpg", alt="callback-popup").popup-content__img
+    .close-btn(data-callback-popup-close)
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <rect x="0" y="0" width="24" height="24" fill="none"/>
+        <path d="M6 18L22 2" stroke="#F8F7F3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 18L6 2" stroke="#F8F7F3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    .popup-content__text
+      h2.d-fz-30.color-white-2.line-h-140.mob-line-h-100.mob-fz-21 Замовте дзвінок
+      p.d-fz-30.color-green.line-h-140.mob-line-h-100.mob-fz-21 і наш фахівець проконсультує вас з усіх питань
+      form(data-popup-form data-lenis-prevent).default-font2
+        .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive").first-offset
+          input(type='text' name="name" placeholder="Ваше ім’я:").form-field__input
+          .input-message(data-input-message)
+        .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+          input(type='text' name="phone" placeholder="Телефон:").form-field__input
+          .input-message(data-input-message)
+        .form-field.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+          input(type='text' name="messager" placeholder="Спосіб зв'язку: Telegram").form-field__input
+          .input-message(data-input-message)
+        .form-field.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+          textarea(placeholder="Введіть своє повідомлення тут...", rows="4")
+        p.privacy.d-fz-12.line-h-150.default-font2
+          | Натискаючи кнопку «Надіслати», ви погоджуєтесь на обробку персональних даних, як зазначено в нашій&nbsp;
+          a(href="#").color-green політиці конфіденційності
+        button(type="submit" data-btn-submit="data-btn-submit").button2.button2--blue 
+          span(data-btn-submit-text) Надіслати

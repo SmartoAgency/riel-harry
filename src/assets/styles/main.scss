@@ -1,0 +1,55 @@
+@import './assets/vars';  // переменные
+@import './assets/smart-grid';  // mixins smartgrid.js
+// libraries
+@import './libs';
+
+// assets
+@import './assets/mixins';  // миксины
+@import './assets/fonts';  // шрифты
+@import './assets/base';  // общие стили
+@import './assets/animation';  // анимации
+@import './assets/class'; // main style
+@import './assets/interface'; // main style
+@import './assets/breadcrubs'; // main style
+
+
+// sass dima
+@import './header';
+@import './footer';
+@import './404';
+@import './loader';
+@import './menu';
+
+@import '../../pug/components/form/form';
+@import '../../pug/components/toster/toster';
+
+
+//@import 'pages/contacts';
+//@import 'pages/contact';
+//@import 'pages/home';
+@import './assets/templates'; // main style
+@import 'components/button';
+@import 'components/about';
+@import 'components/button2';
+@import 'components/plannings';
+@import 'components/flat-card';
+@import 'components/slides';
+@import 'components/advantages';
+@import 'components/button3';
+@import 'components/characteristics';
+@import 'components/gallery';
+@import 'components/construction';
+@import 'components/select';
+@import 'components/construction-card';
+@import 'components/news';
+@import 'components/developer';
+@import 'components/contacts';
+@import 'components/social-icon';
+@import 'components/form-success-popup';
+@import 'components/popup-form-planning';
+@import 'components/checkbox-with-label';
+@import 'components/header-mobile';
+@import 'components/about-and-plannings';
+@import 'components/slider-navigation';
+@import 'components/advanrages-and-characteristics';
+@import 'components/parking';

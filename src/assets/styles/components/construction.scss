@@ -1,0 +1,167 @@
+.construction {
+    padding-top: var(--section-v-offset);
+    padding-bottom: var(--section-v-offset);
+
+    &__title {
+        margin-bottom: 40px;
+
+        @include to(767px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 24px;
+
+        @include to(767px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__table {
+        padding: 32px;
+        border-radius: 24px;
+        border: 1px solid rgba(242, 255, 230, 0.20);
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        margin-bottom: 48px;
+        // 
+
+        @include to(767px) {
+            padding: 14px;
+        }
+
+        &-title {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__progress-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include to(767px) {
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        &-title {
+            width: 20%;
+
+            @include to(767px) {
+                width: 80%;
+            }
+        }
+
+        &-progress {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            @include to(767px) {
+                margin-top: 4px;
+                width: 100%;
+            }
+
+            &>:first-child {
+                text-align: right;
+                width: 5ch;
+
+                @include to(767px) {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+            &-bar {
+                height: 8px;
+                width: calc(100% - 6px - 5ch);
+                background: var(--darkgreen);
+                margin-left: auto;
+                position: relative;
+
+                @include to(767px) {
+                    width: 100%;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: var(--progress, 50%);
+                    height: 100%;
+                    background: var(--green);
+                }
+            }
+        }
+    }
+
+    &__progress-item~&__progress-item {
+        margin-top: 8px;
+    }
+
+    &__filter {
+        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap:24px;
+        position: relative;
+        z-index: 2;
+
+        @include from(768px) {
+            .select~.select {
+                margin-left: 24px;
+            }
+        }
+
+        @include to(767px) {
+            .select {
+                width: 100%;
+            }
+
+            .select~.select {
+                margin-top: 12px;
+            }
+        }
+    }
+
+    &__slider {
+        user-select: none;
+        position: relative;
+
+        .construction-navigation {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 2;
+            padding-left: 16px;
+            padding-right: 16px;
+
+            @media screen and (max-width:767px) {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            svg {
+                pointer-events: all;
+                cursor: pointer;
+
+                @media screen and (max-width:767px) {
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+}

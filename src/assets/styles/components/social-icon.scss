@@ -1,0 +1,22 @@
+.social-icon {
+    background: var(--green-3);
+    display: flex;
+    padding: 14px;
+    align-items: flex-start;
+    gap: 10px;
+    width: max-content;
+    border-radius: 50%;
+    &--lightblue {
+        background: var(--white-2);
+    }
+    svg {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+    }
+    &:hover {
+        svg {
+            transform: rotate(-10deg);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.plannings {
+    padding-bottom: var(--section-v-offset);
+    &__title {
+        width: 100%;
+    }
+    .swiper-container {
+        width: 100%;
+        .slider-navigation {
+            top: 32vw;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: pxInVh(60);
+
+        @media screen and (max-width:767px) {
+            row-gap: 24px;
+        }
+
+        &>button {
+            width: auto;
+            @include to(768px){
+                width: 100%;
+            }
+        }
+    }
+}
+
+.white-bg {
+    background-color: white;
+}

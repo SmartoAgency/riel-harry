@@ -1,0 +1,60 @@
+.button3 {
+    --transition: all 0.3s ease-in-out;
+    --color: var(--green-2);
+    padding: 16px 20px;
+    color: var(--color);
+    font-size: pxWidthInVw(18);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-family: $default-font;
+    line-height: 100%;
+    transition: var(--transition);
+    text-decoration: none;
+    border-radius: 24px;
+    border: 1px solid var(--green-2, #5BAA8F);
+    justify-content: center;
+    
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
+    svg [fill] {
+        fill: var(--green);
+    }
+    svg [stroke] {
+        stroke: var(--green);
+    }
+
+    [fill] {
+        transition: var(--transition);
+    }
+
+    &:hover {
+        background: var(--white-2);
+
+        [fill] {
+            fill: #fff;
+        }
+    }
+
+    &.active,
+    &:active {
+        background: var(--green-3);
+        border-color: var(--green-3);
+        color: var(--white-2);
+
+        [fill] {
+            fill: var(--white-2);
+        }
+    }
+
+    &:disabled {
+        border: 1px solid var(--blue, #6DACE2);
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}

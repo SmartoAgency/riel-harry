@@ -1,0 +1,452 @@
+.f-italic {
+    font-style: italic;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.default-font2 {
+    font-family: $default-font2;
+}
+
+.d-fz-9 {
+    font-size: Min(9px, pxWidthInVw(9));
+    @media screen and (max-width:767px){
+        font-size: 9px;
+    }
+}
+.d-fz-10 {
+    font-size: Min(10px, pxWidthInVw(10));
+    @media screen and (max-width:767px){
+        font-size: 10px;
+    }
+}
+.d-fz-11 {
+    font-size: Min(11px, pxWidthInVw(11));
+    @media screen and (max-width:767px){
+        font-size: 11px;
+    }
+}
+.d-fz-12 {
+    font-size: Min(12px, pxWidthInVw(12));
+    @media screen and (max-width:767px){
+        font-size: 12px;
+    }
+}
+.d-fz-13 {
+    font-size: Min(13px, pxWidthInVw(13));
+    @media screen and (max-width:767px){
+        font-size: 13px;
+    }
+}
+.d-fz-14 {
+    font-size: Min(14px, pxWidthInVw(14));
+    @media screen and (max-width:767px){
+        font-size: 14px;
+    }
+}
+.d-fz-15 {
+    font-size: Min(15px, pxWidthInVw(15));
+    @media screen and (max-width:767px){
+        font-size: 15px;
+    }
+}
+.d-fz-16 {
+    font-size: Min(16px, pxWidthInVw(16));
+    @media screen and (max-width:767px){
+        font-size: 16px;
+    }
+}
+.d-fz-17 {
+    font-size: Min(17px, pxWidthInVw(17));
+    @media screen and (max-width:767px){
+        font-size: 17px;
+    }
+}
+.d-fz-18 {
+    font-size: Min(18px, pxWidthInVw(18));
+    @media screen and (max-width:767px){
+        font-size: 18px;
+    }
+}
+.d-fz-19 {
+    font-size: Min(19px, pxWidthInVw(19));
+    @media screen and (max-width:767px){
+        font-size: 19px;
+    }
+}
+.d-fz-20 {
+    font-size: Min(20px, pxWidthInVw(20));
+    @media screen and (max-width:767px){
+        font-size: 20px;
+    }
+}
+.d-fz-21 {
+    font-size: Min(21px, pxWidthInVw(21));
+    @media screen and (max-width:767px){
+        font-size: 21px;
+    }
+}
+.d-fz-22 {
+    font-size: Min(22px, pxWidthInVw(22));
+    @media screen and (max-width:767px){
+        font-size: 22px;
+    }
+}
+.d-fz-23 {
+    font-size: Min(23px, pxWidthInVw(23));
+    @media screen and (max-width:767px){
+        font-size: 23px;
+    }
+}
+.d-fz-24 {
+    font-size: Min(24px, pxWidthInVw(24));
+    @media screen and (max-width:767px){
+        font-size: 24px;
+    }
+}
+.d-fz-25 {
+    font-size: Min(25px, pxWidthInVw(25));
+    @media screen and (max-width:767px){
+        font-size: 25px;
+    }
+}
+.d-fz-26 {
+    font-size: Min(26px, pxWidthInVw(26));
+    @media screen and (max-width:767px){
+        font-size: 26px;
+    }
+}
+.d-fz-27 {
+    font-size: Min(27px, pxWidthInVw(27));
+    @media screen and (max-width:767px){
+        font-size: 27px;
+    }
+}
+.d-fz-28 {
+    font-size: Min(28px, pxWidthInVw(28));
+    @media screen and (max-width:767px){
+        font-size: 28px;
+    }
+}
+.d-fz-29 {
+    font-size: Min(29px, pxWidthInVw(29));
+    @media screen and (max-width:767px){
+        font-size: 29px;
+    }
+}
+.d-fz-30 {
+    font-size: Min(30px, pxWidthInVw(30));
+    @media screen and (max-width:767px){
+        font-size: 30px;
+    }
+}
+.d-fz-31 {
+    font-size: Min(31px, pxWidthInVw(31));
+    @media screen and (max-width:767px){
+        font-size: 31px;
+    }
+}
+.d-fz-32 {
+    font-size: Min(32px, pxWidthInVw(32));
+    @media screen and (max-width:767px){
+        font-size: 32px;
+    }
+}
+.d-fz-33 {
+    font-size: Min(33px, pxWidthInVw(33));
+    @media screen and (max-width:767px){
+        font-size: 33px;
+    }
+}
+.d-fz-34 {
+    font-size: Min(34px, pxWidthInVw(34));
+    @media screen and (max-width:767px){
+        font-size: 34px;
+    }
+}
+.d-fz-35 {
+    font-size: Min(35px, pxWidthInVw(35));
+    @media screen and (max-width:767px){
+        font-size: 35px;
+    }
+}
+.d-fz-36 {
+    font-size: Min(36px, pxWidthInVw(36));
+    @media screen and (max-width:767px){
+        font-size: 36px;
+    }
+}
+.d-fz-37 {
+    font-size: Min(37px, pxWidthInVw(37));
+    @media screen and (max-width:767px){
+        font-size: 37px;
+    }
+}
+.d-fz-38 {
+    font-size: Min(38px, pxWidthInVw(38));
+    @media screen and (max-width:767px){
+        font-size: 38px;
+    }
+}
+.d-fz-39 {
+    font-size: Min(39px, pxWidthInVw(39));
+    @media screen and (max-width:767px){
+        font-size: 39px;
+    }
+}
+.d-fz-40 {
+    font-size: Min(40px, pxWidthInVw(40));
+    @media screen and (max-width:767px){
+        font-size: 40px;
+    }
+}
+.d-fz-41 {
+    font-size: Min(41px, pxWidthInVw(41));
+    @media screen and (max-width:767px){
+        font-size: 41px;
+    }
+}
+.d-fz-42 {
+    font-size: Min(42px, pxWidthInVw(42));
+    @media screen and (max-width:767px){
+        font-size: 42px;
+    }
+}
+.d-fz-43 {
+    font-size: Min(43px, pxWidthInVw(43));
+    @media screen and (max-width:767px){
+        font-size: 43px;
+    }
+}
+.d-fz-44 {
+    font-size: Min(44px, pxWidthInVw(44));
+    @media screen and (max-width:767px){
+        font-size: 44px;
+    }
+}
+.d-fz-45 {
+    font-size: Min(45px, pxWidthInVw(45));
+    @media screen and (max-width:767px){
+        font-size: 45px;
+    }
+}
+.d-fz-46 {
+    font-size: Min(46px, pxWidthInVw(46));
+    @media screen and (max-width:767px){
+        font-size: 46px;
+    }
+}
+.d-fz-47 {
+    font-size: Min(47px, pxWidthInVw(47));
+    @media screen and (max-width:767px){
+        font-size: 47px;
+    }
+}
+.d-fz-48 {
+    font-size: Min(48px, pxWidthInVw(48));
+    @media screen and (max-width:767px){
+        font-size: 48px;
+    }
+}
+.d-fz-49 {
+    font-size: Min(49px, pxWidthInVw(49));
+    @media screen and (max-width:767px){
+        font-size: 49px;
+    }
+}
+.d-fz-50 {
+    font-size: Min(50px, pxWidthInVw(50));
+    @media screen and (max-width:767px){
+        font-size: 50px;
+    }
+}
+.d-fz-51 {
+    font-size: Min(51px, pxWidthInVw(51));
+    @media screen and (max-width:767px){
+        font-size: 51px;
+    }
+}
+.d-fz-52 {
+    font-size: Min(52px, pxWidthInVw(52));
+    @media screen and (max-width:767px){
+        font-size: 52px;
+    }
+}
+.d-fz-53 {
+    font-size: Min(53px, pxWidthInVw(53));
+    @media screen and (max-width:767px){
+        font-size: 53px;
+    }
+}
+.d-fz-54 {
+    font-size: Min(54px, pxWidthInVw(54));
+    @media screen and (max-width:767px){
+        font-size: 54px;
+    }
+}
+.d-fz-55 {
+    font-size: Min(55px, pxWidthInVw(55));
+    @media screen and (max-width:767px){
+        font-size: 55px;
+    }
+}
+.d-fz-56 {
+    font-size: Min(56px, pxWidthInVw(56));
+    @media screen and (max-width:767px){
+        font-size: 56px;
+    }
+}
+.d-fz-57 {
+    font-size: Min(57px, pxWidthInVw(57));
+    @media screen and (max-width:767px){
+        font-size: 57px;
+    }
+}
+.d-fz-58 {
+    font-size: Min(58px, pxWidthInVw(58));
+    @media screen and (max-width:767px){
+        font-size: 58px;
+    }
+}
+.d-fz-59 {
+    font-size: Min(59px, pxWidthInVw(59));
+    @media screen and (max-width:767px){
+        font-size: 59px;
+    }
+}
+.d-fz-60 {
+    font-size: Min(60px, pxWidthInVw(60));
+    @media screen and (max-width:767px){
+        font-size: 60px;
+    }
+}
+.d-fz-61 {
+    font-size: Min(61px, pxWidthInVw(61));
+    @media screen and (max-width:767px){
+        font-size: 61px;
+    }
+}
+.d-fz-62 {
+    font-size: Min(62px, pxWidthInVw(62));
+    @media screen and (max-width:767px){
+        font-size: 62px;
+    }
+}
+.d-fz-63 {
+    font-size: Min(63px, pxWidthInVw(63));
+    @media screen and (max-width:767px){
+        font-size: 63px;
+    }
+}
+.d-fz-64 {
+    font-size: Min(64px, pxWidthInVw(64));
+    @media screen and (max-width:767px){
+        font-size: 64px;
+    }
+}
+.d-fz-65 {
+    font-size: Min(65px, pxWidthInVw(65));
+    @media screen and (max-width:767px){
+        font-size: 65px;
+    }
+}
+.d-fz-66 {
+    font-size: Min(66px, pxWidthInVw(66));
+    @media screen and (max-width:767px){
+        font-size: 66px;
+    }
+}
+.d-fz-67 {
+    font-size: Min(67px, pxWidthInVw(67));
+    @media screen and (max-width:767px){
+        font-size: 67px;
+    }
+}
+.d-fz-68 {
+    font-size: Min(68px, pxWidthInVw(68));
+    @media screen and (max-width:767px){
+        font-size: 68px;
+    }
+}
+.d-fz-69 {
+    font-size: Min(69px, pxWidthInVw(69));
+    @media screen and (max-width:767px){
+        font-size: 69px;
+    }
+}
+.d-fz-70 {
+    font-size: Min(70px, pxWidthInVw(70));
+    @media screen and (max-width:767px){
+        font-size: 70px;
+    }
+}
+.d-fz-71 {
+    font-size: Min(71px, pxWidthInVw(71));
+    @media screen and (max-width:767px){
+        font-size: 71px;
+    }
+}
+.d-fz-72 {
+    font-size: Min(72px, pxWidthInVw(72));
+    @media screen and (max-width:767px){
+        font-size: 72px;
+    }
+}
+.d-fz-110 {
+    font-size: Min(110px, pxWidthInVw(110));
+    @media screen and (max-width:767px){
+        font-size: 110px;
+    }
+}
+.d-fz-120 {
+    font-size: Min(120px, pxWidthInVw(120));
+    @media screen and (max-width:767px){
+        font-size: 120px;
+    }
+}
+
+
+.line-h-90 {
+    line-height: 90%;
+}
+.line-h-95 {
+    line-height: 95%;
+}
+.line-h-100 {
+    line-height: 100%;
+}
+.line-h-110 {
+    line-height: 110%;
+}
+.line-h-115 {
+    line-height: 115%;
+}
+.line-h-120 {
+    line-height: 120%;
+}
+.line-h-125 {
+    line-height: 125%;
+}
+.line-h-130 {
+    line-height: 130%;
+}
+.line-h-140 {
+    line-height: 140%;
+}
+.line-h-145 {
+    line-height: 145%;
+}
+.line-h-150 {
+    line-height: 150%;
+}
+.line-h-160 {
+    line-height: 160%;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+@import './mobile-font-vars';

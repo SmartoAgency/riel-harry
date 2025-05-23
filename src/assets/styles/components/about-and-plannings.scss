@@ -1,0 +1,16 @@
+.about-and-plannings {
+    position: relative;
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 83vw;
+        z-index: -1;
+        @include to(767px){
+            height: 248vw;
+            object-fit: cover;
+            object-position: left;
+        }
+    }
+}

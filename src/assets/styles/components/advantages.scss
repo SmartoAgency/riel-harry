@@ -1,0 +1,140 @@
+.advantages {
+    padding-top: calc(var(--section-v-offset) * 1.27);
+    padding-bottom: var(--section-v-offset);
+
+    @media screen and (max-width:767px) {
+        padding-top: var(--section-v-offset);
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+
+        @media screen and (max-width:767px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 40px;
+
+        @media screen and (max-width:767px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__tab {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        &>img {
+            margin-top: 40px;
+        }
+
+        &> p~p {
+            margin-top: 0.7em;
+        }
+
+        &>p {
+            @include from(768px) {
+                padding-right: pxWidthInVw(385);
+            }
+        }
+        &>ul {
+            margin-top: 12px;
+        }
+
+        &>ul li {
+            position: relative;
+            padding-left: 22px;
+            @include to(767px){
+                padding-left: 13px;
+            }
+
+            @include from(768px) {
+                padding-right: pxWidthInVw(385);
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.5em;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: var(--white);
+                background: var(--green);
+                border: 1px solid var(--white);
+                @include to(767px){
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+        }
+
+        li~li {
+            margin-top: 12px;
+        }
+
+        .map {
+            height: 70vh;
+            width: 100%;
+        }
+    }
+
+    .button {
+        @media screen and (max-width:767px) {
+            font-size: 14px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+    }
+}
+
+.map-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+
+    .button3 {
+        cursor: pointer;
+        border-radius: 24px;
+        padding: 9px 16px;
+        font-size: 16px;
+        border-color: var(--green-3);
+
+        svg [fill] {
+            fill: var(--green-3);
+        }
+        svg [stroke] {
+            stroke: var(--green-3);
+        }
+
+        @include from (768px) {
+            &:hover {
+                svg path {
+                    fill: var(--green)
+                }
+            }
+
+            &.active {
+                svg path {
+                    fill: rgba(248, 247, 243, 1)
+                }
+            }
+        }
+    }
+}

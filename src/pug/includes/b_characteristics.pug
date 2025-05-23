@@ -1,0 +1,99 @@
+-
+  var list1 = [
+    {
+      icon: './assets/images/characteristics/icons/property 1.svg',
+      label: "Клас ",
+      value: "Бізнес",
+      },
+    {
+      icon: './assets/images/characteristics/icons/blueprint 1.svg',
+      label: "Черги",
+      value: "1 (секція 1 та 2)",
+      },
+    {
+      icon: './assets/images/characteristics/icons/apartments (1) 1.svg',
+      label: "Будинків ",
+      value: "1",
+      },
+    {
+      icon: './assets/images/characteristics/icons/go-upstairs 1.svg',
+      label: "Поверховість ",
+      value: "5-6 поверхів",
+      },
+    {
+      icon: './assets/images/characteristics/icons/build 1.svg',
+      label: "Технологія будівництва ",
+      value: "Каркасно-монолітна",
+      },
+    {
+      icon: './assets/images/characteristics/icons/brickwall 1.svg',
+      label: "Стіни ",
+      value: "Цегла",
+      }
+  ]
+
+  var list2 = [
+    {
+      icon: './assets/images/characteristics/icons/thermal 1.svg',
+      label: 'Утеплення ',
+      value: 'Мінеральна вата',
+      },
+    {
+      icon: './assets/images/characteristics/icons/radiator 1.svg',
+      label: 'Опалення ',
+      value: 'Дахова котельня',
+      },
+    {
+      icon: './assets/images/characteristics/icons/measure 1.svg',
+      label: 'Висота стелі ',
+      value: '2,7 м',
+      },
+    {
+      icon: './assets/images/characteristics/icons/residential 1.svg',
+      label: 'Територія ',
+      value: 'Закрита від авто та сторонніх',
+      },
+    {
+      icon: './assets/images/characteristics/icons/car-parking 1.svg',
+      label: 'Паркінг ',
+      value: 'Підземний',
+      },
+  ]
+  var list = [
+          { icon: "./assets/images/characteristics/icons/property 1.svg", label: "Клас", value: "еліт" },
+          { icon: "./assets/images/characteristics/icons/residential 1.svg", label: "Кількість будинків", value: "2" },
+          { icon: "./assets/images/characteristics/icons/build 1.svg", label: "Технологія будівництва", value: "Каркасна" },
+          { icon: "./assets/images/characteristics/icons/brickwall 1.svg", label: "Стіни", value: "Цегла" },
+          { icon: "./assets/images/characteristics/icons/measure 1.svg", label: "Висота стелі", value: "3 м" },
+          { icon: "./assets/images/characteristics/icons/house (1) 1.svg", label: "Територія", value: "Закрита від авто та сторонніх" },
+          { icon: "./assets/images/characteristics/icons/cityscape 1.svg", label: "Поверховість", value: "3-6" },
+          { icon: "./assets/images/characteristics/icons/blueprint 1.svg", label: "Кількість апартаментів", value: "98" },
+          { icon: "./assets/images/characteristics/icons/thermal 1.svg", label: "Утеплення", value: "Мінеральна вата" },
+          { icon: "./assets/images/characteristics/icons/radiator 1.svg", label: "Опалення", value: "Автономне в будинку" },
+          { icon: "./assets/images/characteristics/icons/parking 1.svg", label: "Паркінг", value: "Підземний" }
+        ]
+.characteristics(id="characteristics")
+  .container
+    .characteristics__content
+      .color-green.d-fz-70.text-uppercase.mob-fz-32.characteristics__title Характеристики
+      .characteristics__list.characteristics__list1
+        each characteristic in list1
+          .characteristics__list-item.color-darkgreen
+            img(src=characteristic.icon, alt="", srcset="")
+            div.d-fz-14.line-h-120.mob-fz-12= characteristic.label
+            div.d-fz-18.line-h-120.mob-fz-16= characteristic.value
+      .characteristics__list.characteristics__list2
+        each characteristic in list2
+          .characteristics__list-item.color-darkgreen
+            img(src=characteristic.icon, alt="", srcset="")
+            div.d-fz-14.line-h-120.mob-fz-12= characteristic.label
+            div.d-fz-18.line-h-120.mob-fz-16= characteristic.value
+      .characteristics__img1
+        .characteristics__img1-wrap(data-paralax-wrap)
+          img(src="./assets/images/characteristics/img1.jpg", alt="", srcset="" loading="lazy" )
+      .characteristics__img2
+        .characteristics__img2-wrap(data-paralax-wrap)
+          img(src="./assets/images/characteristics/img2.jpg", alt="", srcset="" loading="lazy")
+      .characteristics__img3
+        .characteristics__img3-wrap(data-paralax-wrap)
+          img(src="./assets/images/characteristics/img3.jpg", alt="", srcset="" loading="lazy")

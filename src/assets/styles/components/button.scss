@@ -1,0 +1,36 @@
+.button {
+    --pad: 6px;
+    --color: #190C04;
+    --transition: all 0.3s ease-in-out;
+    position: relative;
+    padding: 24px pxWidthInVw(68);
+    color: var(--color);
+
+    font-family: $default-font;
+    font-size: pxWidthInVw(24);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: var(--orange);
+    border-radius: 55px;
+    box-shadow: 0px 12px 52px 0px rgba(255, 146, 113, 0.16);
+    transition: var(--transition);
+    text-decoration: none;
+    &--small {
+        font-size: pxWidthInVw(21);
+    }
+    @media screen and (max-width:767px){
+        font-size: 16px;
+        padding: 18px;
+    }
+    &:hover {
+        background-color: #FF8059;
+    }
+    &:active {
+        background-color: #FF8059;
+    }
+    &:disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}

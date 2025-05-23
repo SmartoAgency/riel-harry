@@ -1,0 +1,242 @@
+.popup-form-planning {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: var(--black);
+    padding: pxInVh(100) pxWidthInVw(180);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    @include to(767px) {
+        padding: 50px 16px;
+    }
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        @include to(767px){
+            margin-bottom: 24px;
+        }
+    }
+
+    &__content {
+
+        max-height: 100%;
+
+        @include to(767px) {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    }
+
+    &__form-wrap {
+        overflow-y: auto;
+        max-height: 70vh;
+        background-color: #072D2B;;
+        padding: 60px;
+        border-radius: 8px;
+
+        @include to(767px) {
+            padding: 16px;
+            overflow-x: hidden
+        }
+    }
+
+    &__form {
+        @include row-flex;
+        align-items: flex-start;
+
+        &-top {
+            @include size(12);
+            @include shift(0);
+            @include size-xs(12);
+            @include shift-xs(0);
+            @include to(767px){
+                margin-bottom: 24px;
+            }
+        }
+
+        &-left {
+            @include size(3);
+            @include shift(0);
+            @include size-xs(12);
+            @include shift-xs(0);
+
+        }
+
+        &-right {
+            @include size(9);
+            @include shift(0);
+            @include size-xs(12);
+            @include shift-xs(0);
+
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: pxWidthInVw(40);
+        top: pxWidthInVw(40);
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        @include to(767px) {
+            right: 16px;
+            top: 16px;
+            width: 24px;
+            height: 24px;
+        }
+        &:hover {
+            transform: rotate(90deg);
+        }
+        
+    }
+
+    &__group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        column-gap: 24px;
+        row-gap: 20px;
+        @include to(767px){
+            row-gap: 16px;
+        }
+
+        .select {
+            margin-right: calc(100% - 240px);
+        }
+
+        &-title {
+            width: 100%;
+        }
+    }
+
+    &__group~&__group {
+        margin-top: 32px;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        margin-top: pxInVh(55);
+
+        @include from(768px) {
+            padding-right: pxWidthInVw(700);
+        }
+
+        &-title {
+            margin-bottom: 24px;
+        }
+
+        [type="submit"] {
+            margin-top: 12px;
+            padding: 16px;
+
+            @include to(767px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__back-link {
+        display: flex;
+        align-items: center;
+        color: var(--white-2);
+        font-family: $default-font2;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 21px */
+        cursor: pointer;
+
+        svg {
+            margin-right: 6px;
+        }
+    }
+
+    .irs {
+        @include to(767px) {
+            width: 95%;
+            margin: auto;
+        }
+
+        @include from(768px) {
+            width: pxWidthInVw(637);
+        }
+    }
+    .custom-select-container {
+        --bg: var(--white-2);
+        --color: var(--black);
+        position: relative;
+        z-index: 2;
+        @include to(767px){
+            width: 100%;
+        }
+    }
+}
+
+
+.irs--flat {
+    .irs-bar {
+        background-color: var(--green);
+    }
+
+    .irs-line {
+        background: var(--green-3);
+    }
+
+    .irs-single,
+    .irs-to,
+    .irs-from {
+        background-color: transparent;
+        color: var(--green);
+        font-size: 16px;
+        font-family: $default-font2;
+        transform: translateY(-20%);
+
+        @include to(767px) {
+            font-size: 14px;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .irs-from:before {
+        content: 'Від'
+    }
+
+    .irs-max,
+    .irs-min {
+        display: none;
+    }
+
+    .irs-handle {
+        border-radius: 50%;
+        border: 4px solid var(--green-2);
+        width: 18px;
+        background-color: #fff;
+        cursor: pointer;
+        transform: scale(1.33);
+
+        i {
+            opacity: 0;
+        }
+    }
+
+    .irs-single {
+        background: rgba(241, 243, 246, 0.12);
+    }
+}

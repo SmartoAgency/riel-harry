@@ -1,0 +1,123 @@
+$default-font: "HelveticaNeueCyr",
+	sans-serif;
+$default-font2: "Skema Pro Display",
+	sans-serif;
+
+$mc: #fff;
+$mc2: #FF554C;
+$mc3: #E5DF06;
+$mc4: #4F90B6;
+$gray: rgb(135, 135, 151);
+$text: #22223E;
+$wc: #fff;
+$bc: #000;
+$bc2: #000;
+$light: #fff;
+$dark: #000;
+$gold: #CFA46E;
+$gold2: #CFA46E;
+
+$main: rgba(255,127,66,1);
+
+
+$black: rgba(3,25,21,1);
+$darkgreen: rgba(7,45,43,1);
+$orange: rgba(255,146,113,1);
+$green-3: rgba(21,107,98,1);
+$green-2: rgba(91,170,143,1);
+$green: rgba(141,219,176,1);
+$white: rgba(255,255,255,1);
+$white-2: rgba(242,255,230,1);
+
+
+
+
+.color-black {
+	color: rgba(3,25,21,1);
+}
+.color-darkgreen {
+	color: rgba(7,45,43,1);
+}
+.color-orange {
+	color: rgba(255,146,113,1);
+}
+.color-green-3 {
+	color: rgba(21,107,98,1);
+}
+.color-green-2 {
+	color: rgba(91,170,143,1);
+}
+.color-green {
+	color: rgba(141,219,176,1);
+}
+.color-green-08 {
+	color: rgba(141,219,176,0.8);
+}
+.color-green-07 {
+	color: rgba(141,219,176,0.7);
+}
+.color-white {
+	color: rgba(255,255,255,1);
+}
+.color-white-2 {
+	color: rgba(242,255,230,1);
+}
+
+
+:root {
+	--black: rgba(3,25,21,1);
+	--darkgreen: rgba(7,45,43,1);
+	--orange: rgba(255,146,113,1);
+	--green-3: rgba(21,107,98,1);
+	--green-2: rgba(91,170,143,1);
+	--green: rgba(141,219,176,1);
+	--white: rgba(255,255,255,1);
+	--white-2: rgba(242,255,230,1);
+}
+
+:root {
+	--in: cubic-bezier(0.13, 0.81, 0.23, 0.96);
+	--header-h: 90px;
+	--logo-w: 155px;
+	--sliceFigure: 239px;
+	--sliceFigure-big: 541px;
+	--page-side-fields: 40px;
+	--section-v-offset: 100px;
+	--button-color: #001A58;
+}
+
+@media screen and (max-width: 1620px) {
+	:root {
+		--header-h: 86px;
+		--logo-w: 120px;
+		--sliceFigure-big: 362px;
+		--section-v-offset: 100px;
+	}
+}
+
+@media screen and (max-width:1024px){
+	:root {
+		--page-side-fields: 20px;
+		--section-v-offset: 100px;
+	}
+}
+
+
+@media screen and (max-width: 1024px) {
+	:root {
+		--header-h: 100px;
+		--logo-w: 90px;
+		--sliceFigure-big: 44px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	:root {
+		--header-h: 66px;
+		--section-v-offset: 60px;
+		--page-side-fields: 16px;
+	}
+}
+
+
+@import './font-vars';

@@ -1,0 +1,121 @@
+.front-screen {
+    position: relative;
+    &__content {
+        position: relative;
+        padding-bottom: pxInVh(47);
+        padding-top: calc(pxInVh(67) + var(--header-h));
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 0.72fr 0.28fr; 
+        grid-template-rows: auto auto; 
+        gap: 20px 43px; 
+        grid-template-areas: 
+            "title adress"
+            "button ."; 
+        align-items: start;
+        justify-content: start;
+        @include to(767px){
+            padding-top: calc(var(--header-h) + 28px);
+            padding-bottom: 28px;
+            grid-template-areas: 
+            "title title"
+            "button button"; 
+        }
+    }
+    &__title {
+        position: relative;
+        grid-area: title;
+    }
+    &__img {
+        @include to(767px){
+            height: 120vw;
+            object-fit: cover;
+            margin-bottom: 120px;
+        }
+    }
+    &__logo {
+        width: pxWidthInVw(180);
+        height: pxWidthInVw(180);
+        position: absolute;
+        bottom: calc(pxWidthInVw(71));
+        right: calc(28% - 14px);
+        @include to(767px){
+            bottom: auto;
+            top: calc(100% + 120vw);
+            right: 50%;
+            width: 112px;
+            height: 112px;
+            transform: translate(50%, -50%);
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__button {
+        grid-area: button;
+        text-align: center;
+        @include from(768px){
+            width: max-content;
+        }
+    }
+    &__adress {
+        text-decoration: none;
+        display: flex;
+        padding: 12px 18px;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 24px;
+        border: 1px solid var(--white-2);
+        transition: all .3s ease;
+        grid-area: adress;
+        @include from(768px){
+            margin-top: 1.1vw;
+        }
+        @include to(767px){
+            position: absolute;
+            top: calc(100% + 120vw + 67px);
+            width: 100%;
+        }
+        &:hover {
+            background: var(--green);
+            border-color: var(--green);
+        }
+    }
+    &__bottom-wrap {
+        position: relative;
+    }
+    &__bottom-info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: var(--black);
+        backdrop-filter: blur(2px);
+        padding: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        width: pxWidthInVw(680);
+        @include from(768px){
+            left: var(--page-side-fields);
+        }
+        @include to(767px){
+            position: static;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &-title {
+            margin-bottom: 24px;
+        }
+        &-group {
+            width: 50%;
+            position: relative;
+            svg {
+                position: absolute;
+                right: calc(100% + 13px);
+                top: 0.2em;
+            }
+        }
+    }
+}

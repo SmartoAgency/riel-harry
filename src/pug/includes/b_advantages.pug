@@ -1,0 +1,31 @@
+.advantages(id="advantages")
+  .container 
+    .advantages__title.color-green.d-fz-70.text-uppercase.mob-fz-32 Переваги
+    .advantages__buttons
+      button(type="button" data-advantage-tab="Roztashuvannya").button3.active
+        span Розташування
+      button(type="button" data-advantage-tab="ArkhitekturneRishennya").button3  
+        span Архітектурне рішення
+      button(type="button" data-advantage-tab="EnglishGarden").button3  
+        span English Garden
+      button(type="button" data-advantage-tab="ClubInfra").button3  
+        span Клубна інфраструктура
+      button(type="button" data-advantage-tab="Bezpeka").button3  
+        span Безпека
+      button(type="button" data-advantage-tab="Enerhonezalezhnist").button3  
+        span Енергонезалежність
+    .advantages__tabs
+      .advantages__tab.color-white-2.d-fz-18.line-h-160.default-font2.mob-fz-14(data-advantage-tab-container="Roztashuvannya")
+        include ../includes/b_advanrages_tabs/tab_location.pug
+      .advantages__tab.color-white-2.d-fz-18.line-h-160.default-font2.mob-fz-14(data-advantage-tab-container="ArkhitekturneRishennya")
+        include ../includes/b_advanrages_tabs/tab_acrhi.pug
+      .advantages__tab.color-white-2.d-fz-18.line-h-160.default-font2.mob-fz-14(data-advantage-tab-container="EnglishGarden")
+        include ../includes/b_advanrages_tabs/tab_englishgarden.pug
+      .advantages__tab.color-white-2.d-fz-18.line-h-160.default-font2.mob-fz-14(data-advantage-tab-container="ClubInfra")
+        include ../includes/b_advanrages_tabs/tab_club_infra.pug
+      .advantages__tab.d-fz-18.line-h-160.color-white.default-font2.mob-fz-14(data-advantage-tab-container="Bezpeka")
+        include ../includes/b_advanrages_tabs/tab_safety.pug
+      .advantages__tab.d-fz-18.line-h-160.color-white.default-font2.mob-fz-14(data-advantage-tab-container="Enerhonezalezhnist")
+        include ../includes/b_advanrages_tabs/tab_energy.pug
+    button(type="button" data-callback-popup-open).button.button--small
+      span Отримати консультацію

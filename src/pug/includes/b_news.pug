@@ -1,0 +1,86 @@
+.news(id="news")
+  .container
+    .news__content
+      .news__title.d-fz-70.mob-fz-32.color-green.text-uppercase(data-split-lines) Акції та новини
+      .swiper-container(data-news-slider)
+        .swiper-wrapper
+          .swiper-slide
+            a(target='_blank' href="#").news-card.news-card--one
+              .news-card-wrap
+                .news-card__content
+                  .d-fz-28 Harry успішно пройшов зиму: всі системи працюють бездоганно
+                  .d-fz-16 Harry — це більше ніж просто житло
+          .swiper-slide
+            a(target='_blank' href="#").news-card.news-card--two
+              .news-card-wrap
+                .news-card__content
+                  .d-fz-28 Є-ОСЕЛЯ ВЖЕ ДОСТУПНА ДЛЯ ОФОРМЛЕННЯ
+                  .d-fz-32 Ставка: 2%
+          .swiper-slide
+            a(target='_blank' href="#").news-card.news-card--three
+              .news-card-wrap
+                .news-card__content
+                  .d-fz-28 Інженерні служби проводять тестування басейнів у Harry
+          .swiper-slide
+            a(target='_blank' href="#").news-card.news-card--four
+              .news-card-wrap
+                .news-card__content
+                  .d-fz-28 Акція! при оформлені з 50% предоплатою, ви отримуєте знижку 
+                  .d-fz-32 -4%
+        .slider-navigation
+          button(type="button" data-news-slider-prev).slider-navigation__button
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.3198 9.38L9.75982 11.94L12.3198 14.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 11.9399L9.83 11.9399" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 20C7.58 20 4 17 4 12C4 7 7.58 4 12 4" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          button(type="button" data-news-slider-next).slider-navigation__button
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.6799 14.62L14.2399 12.06L11.6799 9.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 12.0601H14.17" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+      .news__image1
+        .news__image1-wrap
+          img(src="./assets/images/news/umovy-oplaty-img.svg", alt="" loading="lazy")
+      .news__terms-payment.default-font2
+        div.news__terms-payment-title.d-fz-50.mob-fz-32.color-green.text-uppercase(data-split-lines) Умови оплати
+        ul.line-h-160.d-fz-24.mob-fz-16.mob-line-h-140.color-white-2
+          li 
+            span.color-green Внесок від 30%, 
+            | ціна збільшується на 5% (одноразово)
+          li 
+            span.color-green Внесок від 50%, 
+            | без зміни вартості
+          li 
+            span.color-green Повна оплата, 
+            | знижка 3%
+          li
+            .color-green Розтермінування:
+            ol.d-fz-21.line-h-160.mob-fz-16 
+              li Щомісячно або поквартально
+              li До введення в експлуатацію до грудня 2027 року
+              li Прив'язка до долара згідно курсу на <a class="color-white-2" href="https://riel.ua" target='_blank'>riel.ua</a>
+      .news__other-promotions.color-darkblue
+        .news__other-promotions-title.d-fz-50.mob-fz-32.color-green.text-uppercase(data-split-lines) ДОДАТКОВІ ЗНИЖКИ
+        .news__other-promotions-subtitle.default-font2.d-fz-24.line-h-160.mob-fz-16.color-white-2(data-split-lines) Знижки діють для Військовослужбовців (усі задіяні структури) та їхніх сімей, Медпрацівників та їхніх сімей, ВПО із зони бойових дій
+        ul.default-font2.line-h-160
+          li
+            .d-fz-24.mob-fz-18.color-green(data-split-lines) Умова
+            .d-fz-18.mob-fz-16.color-white-2(data-split-lines) Знижка надається за будь-якого першого внеску
+          li
+            .d-fz-24.mob-fz-18.color-green(data-split-lines) Військовослужбовці
+            .d-fz-18.mob-fz-16.color-white-2(data-split-lines) Якщо перебувають у зоні бойових дій — знижка 5%
+            .d-fz-18.mob-fz-16.color-white-2(data-split-lines) Якщо не перебувають у зоні бойових дій — знижка 3%
+          li
+            .d-fz-24.mob-fz-18.color-green(data-split-lines) Медпрацівники
+            .d-fz-18.mob-fz-16.color-white-2(data-split-lines) Якщо перебувають у зоні бойових дій — знижка 5%
+            .d-fz-18.mob-fz-16.color-white-2(data-split-lines) Якщо не перебувають у зоні бойових дій — знижка 3%
+          li
+            .d-fz-24.mob-fz-18.color-green(data-split-lines) ВПО із зони бойових дій
+            .d-fz-18.mob-fz-16.color-white-2(data-split-lines) — Знижка 5%
+      .news__image2
+        button(type="button" data-popup-form-planning-open).button
+          span ОТРИМАТИ ПЕРСОНАЛЬНИЙ ПРОРАХУНОК
+        .news__image2-wrap
+          img(src="./assets/images/news/add_promotions.jpg", alt="" loading="lazy")

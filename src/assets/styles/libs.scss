@@ -1,0 +1,61 @@
+@import '../scripts/libs/swiper/swiper';
+@import '../../../node_modules/swiper/swiper';
+@import '../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min';
+@import '../../../node_modules/swiper/modules/effect-fade/effect-fade';
+@import '../../../node_modules/accordion-js/dist/accordion.min';
+@import '../../../node_modules/intl-tel-input/build/css/intlTelInput.min';
+@import '../../../node_modules/toastify-js/src/toastify';
+@import '../../../node_modules/custom-select/build/custom-select';
+
+
+.iti {
+    width: 100%;
+}
+.iti__flag {background-image: url("../images/libs/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../images/libs/flags@2x.png");}
+}
+
+.ac .ac-trigger::after {
+  display: none;
+}
+
+.ac .ac-trigger {
+  width: auto;
+}
+
+.ac .ac-trigger {
+  font-family: $default-font;
+  padding: 0;
+}
+
+.swal2-confirm {
+  font-family: $default-font;
+}
+
+.toast-close {
+  color: var(--color-black);
+  opacity: 1;
+  margin-left: 12px;
+}
+
+.gm-style-iw-d {
+  color: var(--black) !important;
+  font-family: $default-font2;
+  a {
+    text-decoration: none;
+    color: var(--color-black) !important;
+  }
+  a:hover {
+    color: var(--color-yellow) !important;
+  }
+}
+
+.gm-style-iw-chr {
+  height: 10px;
+  padding-right: 0px;
+}
+.gm-style-iw-d {
+  padding-right: 40px;
+}

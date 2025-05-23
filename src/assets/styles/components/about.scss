@@ -1,0 +1,85 @@
+.about {
+    position: relative;
+    padding-top: pxInVh(100);
+    padding-bottom: pxInVh(170);
+    @include to(767px){
+        padding-top: 58px;
+        padding-bottom: var(--section-v-offset);
+    }
+    &__img {
+        &-wrap {
+            position: relative;
+            padding-bottom: 80%;
+            svg {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                width: 72px;
+                height: 72px;
+                z-index: 2;
+                cursor: pointer;
+                &:hover {
+                    [fill] {
+                        fill: var(--green);
+                    }
+                    [stroke] {
+                        stroke: var(--green);
+                    }
+                }
+            }
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &__content {
+        @include row-flex;
+        row-gap: pxInVh(40);
+        @include to(767px){
+            row-gap: 24px;
+        }
+        &>.button2 {
+            @include size-xs(12);
+            @include shift-xs(0);
+        }
+    }
+    &__img {
+        @include size(6);
+        @include shift(0);
+        
+        @include size-xs(12);
+        @include shift-xs(0);
+    }
+    &__title {
+        @include size(12);
+        @include shift(0);
+        
+        @include size-xs(12);
+        @include shift-xs(0);
+    }
+    &__text {
+        @include size(6);
+        @include shift(0);
+        
+        @include size-xs(12);
+        @include shift-xs(0);
+        display: flex;
+        flex-direction: column;
+        p~p {
+            margin-top: 24px;
+            @include to(767px){
+                margin-top: 12px;
+            }
+        }
+        .button2 {
+            margin-top: auto;
+            width: max-content;
+        }
+    }
+}

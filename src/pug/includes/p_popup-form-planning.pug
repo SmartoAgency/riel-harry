@@ -30,7 +30,7 @@
             </svg>
             span Повернутися до планувань
         .popup-form-planning__form-left
-          img(src="./assets/images/plannings/studio.jpg", alt="", srcset="")
+          img(src="./assets/images/test-plan.png", alt="", srcset="")
         .popup-form-planning__form-right
           .popup-form-planning__group
             .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Яка кількість кімнат вам потрібна?
@@ -43,16 +43,16 @@
                     <path d="M8 12.4873L10.5127 15L15.9189 10" stroke="#F8F7F3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 .checkbox-with-label__label= val.label
-            .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Який у вас бюджет?
-            <input data-form-planning-range data-range-change-from="budget-from" data-prefix="$ " data-step="1000" data-range-change-to="budget-to" name="budget" data-min="95000" data-max="200000" data-from="110000" data-to="150000">
-            input(type="hidden", name="budget-from")
-            input(type="hidden", name="budget-to")
-            .popup-form-planning__group
-          .popup-form-planning__group
             .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Яка площа м² ?
             <input data-form-planning-range data-range-change-from="area-from" data-range-change-to="area-to" name="area" data-min="30" data-max="75" data-from="40" data-to="50">
             input(type="hidden", name="area-from")
             input(type="hidden", name="area-to")
+            .popup-form-planning__group
+          .popup-form-planning__group
+            .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Який у вас бюджет?
+            <input data-form-planning-range data-range-change-from="budget-from" data-prefix="$ " data-step="1000" data-range-change-to="budget-to" name="budget" data-min="95000" data-max="200000" data-from="110000" data-to="150000">
+            input(type="hidden", name="budget-from")
+            input(type="hidden", name="budget-to")
             .popup-form-planning__group
             .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Що має бути у помешканні?
 
@@ -68,8 +68,8 @@
           .popup-form-planning__group
             .popup-form-planning__group-title.color-white-2.d-fz-21.mob-fz-18 Для кого обираєте помешкання? 
             select(name="for-whom").select
-              option(value="for-myself") Для себе
               option(value="for-my-family") Для своєї родини
+              option(value="for-myself") Для себе
               option(value="for-my-friend") Для батьків
               option(value="for-my-friend") Для дітей
               option(value="for-my-friend") Інвестую в нерухомість

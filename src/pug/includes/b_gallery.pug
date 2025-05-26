@@ -9,7 +9,7 @@
   ]
 .gallery(id="gallery")
   .container
-    .gallery__title.d-fz-70.mob-fz-32.color-green.text-uppercase Галерея
+    .gallery__title.d-fz-70.mob-fz-32.color-green.text-uppercase(data-split-lines) Галерея
     .gallery__buttons
       each category in categories
         button(type="button" data-gallery-filter-button=category.key).button3 #{category.title}

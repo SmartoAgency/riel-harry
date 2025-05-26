@@ -34,4 +34,99 @@
             opacity: 0.8;
         }
     }
+    &__opened {
+        padding: 16px;
+        background-color: var(--darkgreen);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        li {
+            width: calc(50% - 6px);
+        }
+        li:last-child {
+            width: 100%;
+        }
+    }
+    ul>li {
+        position: relative;
+        padding-left: 12px;
+        @include to(767px){
+            padding-left: 12px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5em;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--green);
+            border: 1px solid var(--white);
+            @include to(767px){
+                width: 6px;
+                height: 6px;
+            }
+        }
+    }
+    &__tooltip  {
+        padding: 6px 12px;
+        border-radius: 24px;
+        background: var(--white-2, #F2FFE6);
+        width: max-content;
+    }
+    &__tooltip-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    &__details {
+        width: 100%;
+        display: none;
+        &-text-last {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+        &>:first-child {
+            margin-bottom: 8px;
+        }
+        &>:nth-child(2) {
+            margin-bottom: 20px;
+        }
+    }
+    &.active &__details {
+        display: block;
+    }
+    &__opened {
+        display: none;
+    }
+    &.active &__opened {
+        display: flex;
+    }
+    &.active [data-flat-card-expand] {
+        display: none;
+    }
+    [data-flat-card-hide] {
+        display: none;
+    }
+    &.active [data-flat-card-hide] {
+        display: flex;
+    }
+    .button {
+        width: 100%;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        font-size: 16px;
+        display: none;
+        font-family: $default-font2;
+    }
+    .button2 {
+        font-family: $default-font2;
+    }
+    &.active .button {
+        display: block;
+    }
+    &.active &__hide-on-expand {
+        display: none;
+    }
 }

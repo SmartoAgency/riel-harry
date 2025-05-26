@@ -11,7 +11,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    background: var(--orange);
+    background: #FF8059;
     border-radius: 55px;
     box-shadow: 0px 12px 52px 0px rgba(255, 146, 113, 0.16);
     transition: var(--transition);
@@ -24,13 +24,33 @@
         padding: 18px;
     }
     &:hover {
-        background-color: #FF8059;
+        background-color: #EF7B57;
     }
     &:active {
-        background-color: #FF8059;
+        background-color: #EF7B57;
     }
     &:disabled {
         opacity: 0.4;
         pointer-events: none;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        border-radius: inherit;
+        background-color: transparent;
+        transition: var(--transition);
+        border: 1px solid rgba(242, 255, 230, 0.24);
+        opacity: 0;
+        pointer-events: none;
+    }
+    &:hover::before {
+        opacity: 1;
+    }
+    &:active::before {
+        opacity: 0.5;
     }
 }

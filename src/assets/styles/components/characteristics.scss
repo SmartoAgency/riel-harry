@@ -9,7 +9,7 @@
 
 .characteristics {
     // padding-top: var(--section-v-offset);
-    padding-bottom: var(--section-v-offset);
+    padding-bottom: calc(var(--section-v-offset) * 2);
 
     &__content {
         display: grid;

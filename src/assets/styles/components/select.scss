@@ -135,10 +135,14 @@
   .custom-select-opener {
     border-radius: 24px;
     background-color: var(--bg);
+    border: 1px solid var(--green3, #156B62);
     color: var(--color);
-    padding: 13px 16px;
+    padding: 16px 16px;
     display: flex;
     align-items: center;
+    @include to(767px){
+      justify-content: space-between;
+    }
     &:after {
       content: '';
       display: inline-block;
@@ -161,6 +165,7 @@
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
     margin-top: -1px;
+    transition: none;
   }
   .custom-select-option {
     padding: 8px 16px;

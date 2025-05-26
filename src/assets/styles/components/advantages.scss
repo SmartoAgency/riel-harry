@@ -1,7 +1,7 @@
 .advantages {
     padding-top: calc(var(--section-v-offset) * 1.27);
     padding-bottom: var(--section-v-offset);
-    
+     
 
     @media screen and (max-width:767px) {
         padding-top: var(--section-v-offset);
@@ -28,6 +28,10 @@
 
         @media screen and (max-width:767px) {
             margin-bottom: 16px;
+            .button3 {
+                padding: 13px 24px;
+                
+            }
         }
     }
 
@@ -123,18 +127,24 @@
         svg [stroke] {
             stroke: var(--green-3);
         }
+        @include to(767px){
+            padding: 8px 12px;
+        }
+        @include to(767px){
+            font-size: 14px;
+        }
 
         @include from (768px) {
             &:hover {
-                svg path {
-                    fill: var(--green)
+                svg path[fill] {
+                    fill: var(--white)
                 }
             }
-
-            &.active {
-                svg path {
-                    fill: rgba(248, 247, 243, 1)
-                }
+    
+        }
+        &.active {
+            svg path[fill] {
+                fill: var(--white-2)
             }
         }
     }

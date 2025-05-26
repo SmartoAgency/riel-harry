@@ -61,6 +61,8 @@
             @include shift(0);
             @include size-xs(12);
             @include shift-xs(0);
+            
+            margin-bottom: 32px;
             @include to(767px){
                 margin-bottom: 24px;
             }
@@ -71,6 +73,9 @@
             @include shift(0);
             @include size-xs(12);
             @include shift-xs(0);
+            @include to(767px){
+                margin-bottom: 24px;
+            }
 
         }
 

@@ -3,6 +3,10 @@
     padding-top: var(--section-v-offset);
     padding-bottom: var(--section-v-offset);
     position: relative;
+    @include from(768px){
+        position: sticky;
+        top: 0;
+    }
     &__bg {
         position: absolute;
         left: 0;
@@ -40,7 +44,10 @@
             order: 3;
         }
         &-intro {
-            margin-bottom: 8px;
+            margin-bottom: 32px;
+            @include to(767px){
+                margin-bottom: 8px;
+            }
         }
         &-delimiter {
             width: 100%;

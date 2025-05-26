@@ -75,16 +75,16 @@
 .characteristics(id="characteristics")
   .container
     .characteristics__content
-      .color-green.d-fz-70.text-uppercase.mob-fz-32.characteristics__title Характеристики
+      .color-green.d-fz-70.text-uppercase.mob-fz-32.characteristics__title(data-split-lines) Характеристики
       .characteristics__list.characteristics__list1
         each characteristic in list1
-          .characteristics__list-item.color-darkgreen
+          .characteristics__list-item.color-darkgreen(data-fade-up)
             img(src=characteristic.icon, alt="", srcset="")
             div.d-fz-14.line-h-120.mob-fz-12= characteristic.label
             div.d-fz-18.line-h-120.mob-fz-16= characteristic.value
       .characteristics__list.characteristics__list2
         each characteristic in list2
-          .characteristics__list-item.color-darkgreen
+          .characteristics__list-item.color-darkgreen(data-fade-up)
             img(src=characteristic.icon, alt="", srcset="")
             div.d-fz-14.line-h-120.mob-fz-12= characteristic.label
             div.d-fz-18.line-h-120.mob-fz-16= characteristic.value

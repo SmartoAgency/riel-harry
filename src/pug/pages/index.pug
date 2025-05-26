@@ -7,26 +7,45 @@ block variable
     var class_page = 'home '
     var plannings = [
       {
-        title: 'Студія',
+        title: 'The Visionary',
         area: '30',
-        price: '97 000',
+        price: '1 700 000',
+        action_price: '1 600 000',
         img: './assets/images/test-plan.png',
-        dataset: 'rooms-studio'
+        dataset: 'rooms-studio',
+        deadline: 'III кв. 2027',
+        discount_value: '5%',
       },
       {
-        title: '1-кімнатне',
-        area: '35',
-        price: '110 000',
+        title: 'The Explorer',
+        area: '40',
+        price: '2 100 000',
+        action_price: '1 600 000',
         img: './assets/images/test-plan.png',
-        dataset: 'rooms-1-bedroom'
+        dataset: 'rooms-1-bedroom',
+        deadline: 'III кв. 2027',
+        discount_value: '5%',
         
       },
       {
-        title: '2-кімнатне',
-        area: '70',
-        price: '196 000',
+        title: 'The Grounded',
+        area: '60',
+        price: '1 900 000',
+        action_price: '1 600 000',
         img: './assets/images/test-plan.png',
-        dataset: 'rooms-2-bedroom'
+        dataset: 'rooms-2-bedroom',
+        deadline: 'III кв. 2027',
+        discount_value: '5%',
+      },
+      {
+        title: 'The Rebel',
+        area: '80',
+        price: '2 400 000',
+        action_price: '1 600 000',
+        img: './assets/images/test-plan.png',
+        dataset: 'rooms-2-bedroom',
+        deadline: 'III кв. 2027',
+        discount_value: '5%',
       }
 
     ]
@@ -42,11 +61,25 @@ block scripts
   script(defer src='./assets/scripts/home.bundle.js')
 block content
   .front-screen
+    .front-screen__mobile-border.show-on-mobile
+      <svg xmlns="http://www.w3.org/2000/svg" width="2" height="885" viewBox="0 0 2 885" fill="none">
+        <path opacity="0.25" d="M1 0V885" stroke="url(#paint0_linear_88_6938222)"/>
+        <defs>
+        <linearGradient id="paint0_linear_88_6938222" x1="1.5" y1="0" x2="1.5" y2="885" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="#999999" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+      </svg>
     .container
-      .front-screen__content
+      .front-screen__content.ready-to-animate
         h1.front-screen__title.color-green.d-fz-120.line-h-115.mob-fz-53.text-uppercase
-          span.fw-900 Harry 
-          | — дім з характером
+          .show-on-desktop
+            span.fw-900 Harry 
+            | — дім з характером
+          .show-on-mobile
+            span.fw-900 Harry  
+            |— <br> дім з характером
         a(href="https://www.google.com/maps/dir//25A,+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%A1%D1%82%D0%BE%D1%80%D0%BE%D0%B6%D0%B5%D0%BD%D0%BA%D0%B0,+25%D0%90,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+79000/@49.8413723,24.0002808,204m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x473add9b4e979f4b:0xc2327044185996b0!2m2!1d24.0003655!2d49.8413877!3e0?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D", target="_blank", rel="noopener noreferrer").front-screen__adress.color-white-2.d-fz-21.mob-fz-18
           <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.1833 7.54166C16.3083 3.69166 12.95 1.95833 9.99996 1.95833C9.99996 1.95833 9.99996 1.95833 9.99162 1.95833C7.04996 1.95833 3.68329 3.68333 2.80829 7.53333C1.83329 11.8333 4.46662 15.475 6.84996 17.7667C7.73329 18.6167 8.86662 19.0417 9.99996 19.0417C11.1333 19.0417 12.2666 18.6167 13.1416 17.7667C15.525 15.475 18.1583 11.8417 17.1833 7.54166ZM9.99996 11.7167C8.54996 11.7167 7.37496 10.5417 7.37496 9.09166C7.37496 7.64166 8.54996 6.46666 9.99996 6.46666C11.45 6.46666 12.625 7.64166 12.625 9.09166C12.625 10.5417 11.45 11.7167 9.99996 11.7167Z" fill="#F2FFE6"/>
@@ -56,7 +89,7 @@ block content
           span Обрати помешкання
         a(href="http://riel.ua", target="_blank", rel="noopener noreferrer").front-screen__logo
           include ../components/developer-logo.pug
-    img(src="./assets/images/front-screen-img.jpg", alt="", srcset="").front-screen__img
+    img(src="./assets/images/front-screen-img.jpg", alt="", srcset="" data-front-screen-img).front-screen__img
     .front-screen__bottom-wrap.container
       .front-screen__bottom-info.color-white-2
         .front-screen__bottom-info-group
@@ -78,8 +111,8 @@ block content
         .about__content
           .about__title.color-green.d-fz-62.mob-fz-32.text-uppercase(data-split-lines) Про проєкт
           .about__text
-            p.d-fz-24.mob-fz-16(data-split-lines) Harry народився для тих, хто вже знає, хто вони є. У світі, де кожен намагається вписати тебе у свій шаблон, Harry не йде на компроміси із собою. Це будинок, що витримає твої амбіції. 
-            p.d-fz-24.mob-fz-16(data-split-lines)  Будинок з характером, де історична форма оживає у сучасній реновації, даруючи відчуття справжнього дому тим, хто цінує традицію і комфорт.
+            p.d-fz-24.mob-fz-16.mob-line-h-140(data-split-lines) Harry народився для тих, хто вже знає, хто вони є. У світі, де кожен намагається вписати тебе у свій шаблон, Harry не йде на компроміси із собою. Це будинок, що витримає твої амбіції. 
+            p.d-fz-24.mob-fz-16.mob-line-h-140(data-split-lines)  Будинок з характером, де історична форма оживає у сучасній реновації, даруючи відчуття справжнього дому тим, хто цінує традицію і комфорт.
           .about__img
             .about__img-wrap
               <svg data-play-video="about-video" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,57 +143,71 @@ block content
 
             .swiper-wrapper
               each val in plannings
-                .flat-card.swiper-slide
+                .flat-card.swiper-slide(data-flat-card)
                   .flat-card__img
                     .flat-card__img-wrap
                       img(src=val.img, alt="", srcset="" loading="lazy")
-                  div.flat-card__top1.d-fz-21.mob-fz-18.default-font2 #{val.title}
-                  div.flat-card__top2.d-fz-16 від #{val.area}м²
-                  .flat-card__bottom
+                  div.flat-card__hide-on-expand.flat-card__top1.d-fz-21.mob-fz-18.default-font2 #{val.title}
+                  div.flat-card__hide-on-expand.flat-card__top2.d-fz-16 від #{val.area}м²
+                  .flat-card__bottom.flat-card__hide-on-expand
                     div.d-fz-14.line-h-150.mob-fz-14 Ціна від
                     div.d-fz-24.line-h-150.mob-fz-21 $ #{val.price} 
-                  button(type="button" data-popup-form-planning-open data-plannings-popup-checkbox=val.dataset).button2.default-font2
+                  .flat-card__details.default-font2
+                    div.d-fz-21 #{val.title} (від #{val.area}м²)
+                    div.d-fz-14.line-h-150 Термін здачі: #{val.deadline}
+                    div.d-fz-14.line-h-150 Ціна від:
+                    div.d-fz-12.line-h-150.line-thorught #{val.price} $
+                    .flat-card__tooltip-wrap
+                      div.d-fz-21.line-h-150.color-green #{val.action_price} $
+                      .flat-card__tooltip.color-darkgreen.d-fz-12 #{val.discount_value}
+                    .flat-card__details-text-last.d-fz-14 Ціна діє за умови 100% оплати
+                  button(type="button" data-flat-card-expand).button2.default-font2
                     span Детальніше
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                       <path d="M5.72083 2.88012L9.52416 6.68345C9.97333 7.13262 9.97333 7.86762 9.52416 8.31678L5.72083 12.1201" stroke="#072D2B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
+                  button(type="button" data-flat-card-hide).button2.default-font2
+                    span Сховати
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+                      <path d="M12.1199 5.22095L8.31655 9.02428C7.86738 9.47345 7.13238 9.47345 6.68322 9.02428L2.87988 5.22095" stroke="#072D2B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  ul.flat-card__opened.default-font2.color-white-2
+                      li.line-h-120
+                        div.d-fz-12 Секція 
+                        div.d-fz-16 1.3
+                      li.line-h-120
+                        div.d-fz-12 Поверх 
+                        div.d-fz-16 3
+                      li.line-h-120
+                        div.d-fz-12 Помешкання 
+                        div.d-fz-16 37
+                      li.line-h-120
+                        div.d-fz-12 Загальна площа 
+                        div.d-fz-16 33.73 м2
+                      li.line-h-120
+                        div.d-fz-12 Пердпокій 
+                        div.d-fz-16 2.89 м2
+                      li.line-h-120
+                        div.d-fz-12 Санвузол 
+                        div.d-fz-16 4,91 м2
+                      li.line-h-120
+                        div.d-fz-12 Кухня-вітальня 
+                        div.d-fz-16 19,55 м2
+                      li.line-h-120
+                        div.d-fz-12 Лоджія 
+                        div.d-fz-16 6,38 м2
+                      li.line-h-120
+                        div.d-fz-12 Переваги 
+                        div.d-fz-16 Балкон-лоджія, панорамні вікна
+                  button(type="button" data-callback-popup-open).button.d-fz-16
+                    span Отримати планування
           button(type="button" data-popup-form-planning-open).button
             span Підібрати помешкання
-  .slides.slides--iframe
-    .container
-      .slides__content
-        .slides__title.d-fz-70.line-h-110.mob-fz-32.color-darkgreen.text-uppercase
-          span уявіть життя в&nbsp;
-          span.fw-900 harry
-        .swiper-container(data-slides-slider)
-          .slider-navigation
-            button(type="button" data-slides-slider-prev).slider-navigation__button
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.3198 9.38L9.75982 11.94L12.3198 14.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M20 11.9399L9.83 11.9399" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 20C7.58 20 4 17 4 12C4 7 7.58 4 12 4" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            button(type="button" data-slides-slider-next).slider-navigation__button
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.6799 14.62L14.2399 12.06L11.6799 9.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M4 12.0601H14.17" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-          .swiper-wrapper
-            .swiper-slide
-              .slides__img
-                <iframe title="VR Tour" height="100%" width="100%" frameborder="0" data-src="https://vrnet.io/view5.16a/?model=ua/riel/HydePark/ext-p3"   allowfullscreen></iframe>
-            .swiper-slide
-              .slides__img
-                <iframe title="VR Tour" height="100%" width="100%" frameborder="0" data-src="https://ua-maps3d.vrnet.io/view5.16a/?model=ua/riel/HydePark/ext-p2"  allowfullscreen></iframe>
-            .swiper-slide
-              .slides__img
-                <iframe title="VR Tour" height="100%" width="100%" frameborder="0" data-src="https://vrnet.io/view5.16a/?model=ua/riel/HydePark/mzk"  allowfullscreen></iframe>
   .slides.slides--white
     .container
       .slides__content
-        .slides__title.d-fz-70.line-h-110.mob-fz-32.color-darkgreen.text-uppercase
-          span вид з&nbsp;
+        .slides__title.d-fz-70.line-h-110.mob-fz-32.color-darkgreen.text-uppercase(data-fade-up)
+          span уявіть життя в&nbsp;
           span.fw-900 harry
         .swiper-container(data-slides2-slider)
           .slider-navigation
@@ -186,6 +233,39 @@ block content
             .swiper-slide
               .slides__img
                 img(src="./assets/images/life-in-harry/2.jpg", alt="", srcset="")
+            .swiper-slide
+              .slides__img
+                img(src="./assets/images/life-in-harry/2.jpg", alt="", srcset="")
+  .slides.slides--iframe
+    .container
+      .slides__content
+        .slides__title.d-fz-70.line-h-110.mob-fz-32.color-darkgreen.text-uppercase(data-fade-up)
+          span вид з&nbsp;
+          span.fw-900 harry
+        .swiper-container(data-slides-slider)
+          .slider-navigation
+            button(type="button" data-slides-slider-prev).slider-navigation__button
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.3198 9.38L9.75982 11.94L12.3198 14.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20 11.9399L9.83 11.9399" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 20C7.58 20 4 17 4 12C4 7 7.58 4 12 4" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            button(type="button" data-slides-slider-next).slider-navigation__button
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6799 14.62L14.2399 12.06L11.6799 9.5" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 12.0601H14.17" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="#031915" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          .swiper-wrapper
+            .swiper-slide
+              .slides__img
+                <iframe title="VR Tour" height="100%" width="100%" frameborder="0" data-src="https://vrnet.io/view5.16a/?model=ua/riel/HydePark/ext-p3"   allowfullscreen></iframe>
+            .swiper-slide
+              .slides__img
+                <iframe title="VR Tour" height="100%" width="100%" frameborder="0" data-src="https://ua-maps3d.vrnet.io/view5.16a/?model=ua/riel/HydePark/ext-p2"  allowfullscreen></iframe>
+            .swiper-slide
+              .slides__img
+                <iframe title="VR Tour" height="100%" width="100%" frameborder="0" data-src="https://vrnet.io/view5.16a/?model=ua/riel/HydePark/mzk"  allowfullscreen></iframe>
   .advanrages-and-characteristics
     img(src='./assets/images/advantages-and-characteristics-bg.svg').advanrages-and-characteristics__bg
     include ../includes/b_advantages.pug

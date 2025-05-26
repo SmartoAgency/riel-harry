@@ -1,5 +1,5 @@
 .news {
-    padding-bottom: var(--section-v-offset);
+    padding-bottom: calc(var(--section-v-offset) * 2);
     padding-top: var(--section-v-offset);
         position: relative;
     z-index: 2;
@@ -26,7 +26,7 @@
             margin-bottom: calc(var(--section-v-offset) * 2);
         }
         @include to(767px){
-            padding-bottom: 50px;
+            padding-bottom: 60px;
         }
         .slider-navigation {
             @include to(767px){
@@ -92,11 +92,11 @@
         @include shift(0);
         @include size-xs(12);
         @include shift-xs(0);
-                margin-bottom: pxInVh(120);
+                margin-bottom: calc(var(--section-v-offset) * 2);
 
         @include to(767px) {
             order: 4;
-            margin-top: 25px;
+            margin-top: 60px;
             margin-bottom: 24px;
         }
 
@@ -202,7 +202,7 @@
             margin-top: 60px;
 
             @include to(767px) {
-                margin-top: 36px;
+                margin-top: 24px;
             }
         }
     }

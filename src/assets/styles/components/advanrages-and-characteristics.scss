@@ -1,5 +1,6 @@
 .advanrages-and-characteristics {
     position: relative;
+   
     &__bg {
         pointer-events: none;
         z-index: -1;
@@ -11,6 +12,9 @@
         object-fit: cover;
         background-color: var(--black);
         z-index: 0;
+        @include to(767px){
+            display: none;
+        }
     }
     .characteristics,
     .advantages {

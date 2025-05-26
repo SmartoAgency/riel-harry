@@ -46,16 +46,16 @@
       .news__terms-payment.default-font2
         div.news__terms-payment-title.d-fz-50.mob-fz-32.color-green.text-uppercase(data-split-lines) Умови оплати
         ul.line-h-160.d-fz-24.mob-fz-16.mob-line-h-140.color-white-2
-          li 
+          li(data-fade-up)
             span.color-green Внесок від 30%, 
             | ціна збільшується на 5% (одноразово)
-          li 
+          li(data-fade-up)
             span.color-green Внесок від 50%, 
             | без зміни вартості
-          li 
+          li(data-fade-up)
             span.color-green Повна оплата, 
             | знижка 3%
-          li
+          li(data-fade-up)
             .color-green Розтермінування:
             ol.d-fz-21.line-h-160.mob-fz-16 
               li Щомісячно або поквартально
@@ -63,8 +63,8 @@
               li Прив'язка до долара згідно курсу на <a class="color-white-2" href="https://riel.ua" target='_blank'>riel.ua</a>
       .news__other-promotions.color-darkblue
         .news__other-promotions-title.d-fz-50.mob-fz-32.color-green.text-uppercase(data-split-lines) ДОДАТКОВІ ЗНИЖКИ
-        .news__other-promotions-subtitle.default-font2.d-fz-24.line-h-160.mob-fz-16.color-white-2(data-split-lines) Знижки діють для Військовослужбовців (усі задіяні структури) та їхніх сімей, Медпрацівників та їхніх сімей, ВПО із зони бойових дій
-        ul.default-font2.line-h-160
+        .news__other-promotions-subtitle.default-font2.d-fz-24.line-h-160.mob-fz-16.color-white-2.mob-line-h-140(data-split-lines) Знижки діють для Військовослужбовців (усі задіяні структури) та їхніх сімей, Медпрацівників та їхніх сімей, ВПО із зони бойових дій
+        ul.default-font2.line-h-160.mob-line-h-140
           li
             .d-fz-24.mob-fz-18.color-green(data-split-lines) Умова
             .d-fz-18.mob-fz-16.color-white-2(data-split-lines) Знижка надається за будь-якого першого внеску
@@ -80,7 +80,7 @@
             .d-fz-24.mob-fz-18.color-green(data-split-lines) ВПО із зони бойових дій
             .d-fz-18.mob-fz-16.color-white-2(data-split-lines) — Знижка 5%
       .news__image2
-        button(type="button" data-popup-form-planning-open).button
+        button(type="button" data-callback-popup-open).button
           span ОТРИМАТИ ПЕРСОНАЛЬНИЙ ПРОРАХУНОК
         .news__image2-wrap
           img(src="./assets/images/news/add_promotions.jpg", alt="" loading="lazy")

@@ -20,6 +20,24 @@ gsap.core.globals('ScrollTrigger', ScrollTrigger);
 
 Swiper.use([Mousewheel, Navigation, FreeMode]);
 
+function frontScreenHandler() {
+  const frontScreenImg = document.querySelector('[data-front-screen-img]');
+  if (!frontScreenImg) return;
+  gsap.set(frontScreenImg, { opacity: 1, clipPath: 'polygon(0% 0%, 0% 0%, 0% 10%, 0% 10%)'});
+  let tl = gsap.timeline({
+    paused: true,
+  })
+  .fromTo('.front-screen__content', { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, stagger: 0.25, ease: 'power2.out' }, '<')
+  .to(frontScreenImg, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 10%, 0% 10%)', duration: 1, ease: 'power2.out' },'<')
+  .to(frontScreenImg, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.75, ease: 'power2.out' })
+  window.addEventListener('load', ()=>{
+    document.querySelector('.front-screen__content').classList.remove('ready-to-animate');
+    tl.play();
+  }, { once: true });
+}
+
+frontScreenHandler();
+
 const slider = new Swiper('[data-slides-slider]', {
   navigation: {
     nextEl: '[data-slides-slider-next]',
@@ -462,7 +480,20 @@ function planningsSlider() {
     },
   });
 }
-
+function planningsCardsHandler() {
+  //data-flat-card-expand
+  document.querySelectorAll('[data-flat-card]').forEach(el => {
+    el.addEventListener('click',function(evt){
+      if (evt.target.closest('[data-flat-card-expand]')) {
+        return el.classList.add('active');
+      }
+      if (evt.target.closest('[data-flat-card-hide]')) {
+        return el.classList.remove('active');
+      }
+    });
+  })
+}
+planningsCardsHandler();
 planningsSlider();
 
 
@@ -575,3 +606,28 @@ function parkingLinesAnimation() {
   })
 }
 parkingLinesAnimation();
+
+
+
+function fadeUpAnimation() {
+  document.querySelectorAll('[data-fade-up]').forEach(el => {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+        once: true,
+      }
+    })
+    .fromTo(el, {
+      y: 50,
+      opacity: 0,
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power2.out',
+    });
+  });
+}
+
+fadeUpAnimation();

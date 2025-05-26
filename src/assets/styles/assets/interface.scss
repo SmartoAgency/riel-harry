@@ -186,7 +186,8 @@ div:where(.swal2-container).swal2-noanimation.installment-popup-container {
     // padding: var(--padding);
     padding-bottom: 60px;
     max-width: 900px;
-    max-height: 100svh;
+    // max-height: 900px;
+    height:95vh;
     width: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -194,6 +195,7 @@ div:where(.swal2-container).swal2-noanimation.installment-popup-container {
     text-align: left;
     // background-image: url('../images/form-content-bg.svg');
     background-image: url('../images/form-content-bg.svg');
+    overflow-y: auto;
 
     @include to(767px) {
       // height: 100%;
@@ -205,6 +207,8 @@ div:where(.swal2-container).swal2-noanimation.installment-popup-container {
   .popup-content__img {
     width: 100%;
     height: auto;
+    height: pxInVh(400);
+    object-fit: cover;
 
     @include to(767px) {
       height: 150px;
@@ -218,7 +222,7 @@ div:where(.swal2-container).swal2-noanimation.installment-popup-container {
     margin-left: auto;
     margin-right: auto;
     padding: var(--padding);
-    margin-top: -100px;
+    margin-top: -200px;
     background: var(--darkgreen);
     backdrop-filter: blur(6px);
 
@@ -231,7 +235,7 @@ div:where(.swal2-container).swal2-noanimation.installment-popup-container {
     @include from(900px) {
       form {
         overflow: auto;
-        height: 35svh;
+        // height: 35svh;
         padding-top: 24px;
       }
     }

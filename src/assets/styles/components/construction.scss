@@ -20,6 +20,12 @@
             margin-bottom: 16px;
         }
     }
+    @include to(767px){
+        &__table-group.js-collapsed &__progress-item {
+            display: none;
+        }
+
+    }
 
     &__table {
         padding: 32px;
@@ -37,7 +43,28 @@
 
         &-title {
             margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include to(767px){
+                cursor: pointer;
+            }
+            margin-bottom: 12px;
+            svg {
+                transition: .25s ease-in-out;
+                transform-origin: center;
+                transform-box: fill-box;
+                transform: rotate(180deg);
+            }
         }
+    }
+    @include to(767px){
+        &__table-group.js-collapsed .construction__table-title {
+            margin-bottom: 0;
+        }
+    }
+    &__table-group.js-collapsed .construction__table-title svg {
+        transform: rotate(0deg);
     }
 
     &__progress-item {

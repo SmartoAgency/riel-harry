@@ -631,3 +631,16 @@ function fadeUpAnimation() {
 }
 
 fadeUpAnimation();
+
+
+function constructionMobileAccordeonsHandler() {
+  document.querySelectorAll('[data-construction-table-group]').forEach(el => {
+    el.addEventListener('click', function(evt) {
+      if (!evt.target.closest('[data-construction-table-group-open]') || window.innerWidth > 767) return;
+      el.classList.toggle('js-collapsed');
+      
+    });
+  });
+}
+
+constructionMobileAccordeonsHandler();

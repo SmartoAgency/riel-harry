@@ -15,8 +15,13 @@
       .construction__table-group.mob-fz-12.d-fz-14
         div Дата оновлення (12.03.2025)
         div Дата планового завершення будівництва (20.05.2027)
-      .construction__table-group
-        .d-fz-18.construction__table-title.mob-fz-16 Статус будівництва
+      .construction__table-group(data-construction-table-group)
+        .d-fz-18.construction__table-title.mob-fz-16(data-construction-table-group-open)
+          span Статус будівництва
+          .show-on-mobile
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1.69999 3.71289L4.41665 6.42956C4.73749 6.75039 5.26249 6.75039 5.58332 6.42956L8.29999 3.71289" stroke="#F2FFE6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         .construction__progress-item.d-fz-14
           .construction__progress-item-title Будівництво
           .construction__progress-item-progress(style="--progress: 31%;")
@@ -47,8 +52,13 @@
           .construction__progress-item-progress(style="--progress: 4%;")
             div 4%
             .construction__progress-item-progress-bar 
-      .construction__table-group
-        .d-fz-18.construction__table-title.mob-fz-16 Оздоблювальні роботи
+      .construction__table-group(data-construction-table-group)
+        .d-fz-18.construction__table-title.mob-fz-16(data-construction-table-group-open)
+          span Оздоблювальні роботи
+          .show-on-mobile
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1.69999 3.71289L4.41665 6.42956C4.73749 6.75039 5.26249 6.75039 5.58332 6.42956L8.29999 3.71289" stroke="#F2FFE6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         .construction__progress-item.d-fz-14
           .construction__progress-item-title Зовнішні стіни та перегородки
           .construction__progress-item-progress(style="--progress: 15%;")
@@ -74,8 +84,13 @@
           .construction__progress-item-progress(style="--progress: 2%;")
             div 2%
             .construction__progress-item-progress-bar 
-      .construction__table-group
-        .d-fz-18.construction__table-title.mob-fz-16 Благоустрій
+      .construction__table-group(data-construction-table-group)
+        .d-fz-18.construction__table-title.mob-fz-16(data-construction-table-group-open)
+          span Благоустрій
+          .show-on-mobile
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <path d="M1.69999 3.71289L4.41665 6.42956C4.73749 6.75039 5.26249 6.75039 5.58332 6.42956L8.29999 3.71289" stroke="#F2FFE6" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
         .construction__progress-item.d-fz-14
           .construction__progress-item-title МЗК
           .construction__progress-item-progress(style="--progress: 42%;")

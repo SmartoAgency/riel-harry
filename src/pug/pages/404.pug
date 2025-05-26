@@ -11,16 +11,16 @@ block scripts
 
 block content
   .page404
-    .page404__img
-      img(src="./assets/images/index/sketch-desktop.jpg", alt="", srcset="")
+    .page404__bg
+      img(src="./assets/images/404-bg.svg", alt="", srcset="")
     .page404__text
-      .page404__title 404
-      .text-style-1920-h-1.text-color-body-description Упс, щось пішло не так...
+      .page404__text-title
+        img(src="./assets/images/404.png", alt="", srcset="")
+      .text-style-1920-h-1.text-color-body-description.color-green.d-fz-42.mob-fz-28 Ой! Сторінки не знайдено
+      .page404__text-description.text-style-1920-h-1.text-color-body-description.color-white-2.d-fz-21.default-font2.mob-fz-16 Ми не змогли знайти сторінку, яку ви шукали. Можливо, вона була переміщена або її більше не існує.
       .page404__buttons
-        a(class="button-main" href="#")
-          span НАЗАД
-        a(class="button-main" href="#")
-          span НА ГОЛОВНУ
+        a( href="/").page404__button
+          span Повернутись на головну
   include ../includes/contact-screen.pug
 block footer
   include ../includes/footer.pug

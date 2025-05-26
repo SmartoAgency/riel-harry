@@ -2,6 +2,9 @@
     position: relative;
     padding-top: var(--section-v-offset);
     padding-bottom: var(--section-v-offset);
+        position: relative;
+    z-index: 2;
+    background-color: var(--black);
     @include to(767px){
         padding-top: 83px;
         padding-bottom: 83px;

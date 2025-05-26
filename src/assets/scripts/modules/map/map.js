@@ -69,8 +69,7 @@ export default function googleMap() {
   function createMap(container) {
     const gmarkers = [];
     const center = {
-      lat: 49.839702,
-      lng: 24.0609219,
+      lat: 49.84140317887458,  lng: 24.000367442154594
     };
 
     const choosedCategories = new Set();
@@ -118,9 +117,9 @@ export default function googleMap() {
       : './assets/images/map/';
     const defaultMarkerSize =
       document.documentElement.clientWidth < 1600
-        ? new google.maps.Size(46, 80)
-        : new google.maps.Size(56, 90);
-    const buildLogoSize = new google.maps.Size(82, 82);
+        ? new google.maps.Size(23, 40)
+        : new google.maps.Size(28, 45);
+    const buildLogoSize = new google.maps.Size(72, 185);
 
     const markersAdresses = {
       main: `${baseFolder}main.svg`,
@@ -144,88 +143,130 @@ export default function googleMap() {
 
     const markersData = [
       {
-        type: 'school',
-        icon: {
-          url: markersAdresses.school,
-          scaledSize: defaultMarkerSize,
-        },
-        position: { lat: 49.8411438, lng: 24.0670208 },
-        text: 'Школа №70',
+          position: { lat: 49.84566325383819, lng: 23.99638091685124 },
+          text: 'ІЗІУМ | Офтальмологічний центр | Львів',
+          type: "pharmacy",
+          icon: {
+              url: markersAdresses.pharmacy,
+              scaledSize: defaultMarkerSize,
+          },
       },
       {
-        type: 'school',
-        icon: {
-          url: markersAdresses.school,
-          scaledSize: defaultMarkerSize,
-        },
-        position: { lat: 49.837203, lng: 24.0629459 },
-        text: 'Школа №63',
-      },
-
-      {
-        type: 'pharmacy',
-        icon: {
-          url: markersAdresses.pharmacy,
-          scaledSize: defaultMarkerSize,
-        },
-        position: { lat: 49.8383945, lng: 24.057029 },
-        text: 'Амбулаторія сімейної медицини КНП "1-а міська поліклініка м.Львова"',
+          position: { lat: 49.83866690255672, lng: 24.011226358806763 },
+          text: "Шпиталь імені митрополита Шептицького", 
+          type: "pharmacy",
+          icon: {
+              url: markersAdresses.pharmacy,
+              scaledSize: defaultMarkerSize,
+          },
       },
       {
-        type: 'pharmacy',
-        icon: {
-          url: markersAdresses.pharmacy,
-          scaledSize: defaultMarkerSize,
-        },
-        position: { lat: 49.8383982, lng: 24.0560681 },
-        text: 'Аптека 3І',
+          position: { lat: 49.84652568466018, lng: 24.005890726698603 },
+          text: "Ojakhi | Оджахі - ресторан грузинської та української кухні", 
+          type: "restaurant",
+          icon: {
+              url: markersAdresses.restaurant,
+              scaledSize: defaultMarkerSize,
+          },
       },
       {
-        type: 'garden',
-        icon: {
-          url: markersAdresses.garden,
-          scaledSize: defaultMarkerSize,
-        },
-        position: { lat: 49.8397878, lng: 24.0584562 },
-        text: 'Дитячий садок №132',
+          position: { lat: 49.842382931782005, lng: 24.00948163360373 },
+          text: "Soprano roof terrace", 
+          type: "restaurant",
+          icon: {
+              url: markersAdresses.restaurant,
+              scaledSize: defaultMarkerSize,
+          },
       },
-
+      // {
+      //     position: { lat: 49.84182153349779, lng: 24.000499933787157 },
+      //     text: "ПАТ Концерн Електрон", 
+      //     type: "school",
+      //     icon: {
+      //         url: markersAdresses.school,
+      //         scaledSize: defaultMarkerSize,
+      //     },
+      // },
       {
-        type: 'restaurant',
-        icon: {
-          url: markersAdresses.restaurant,
-          scaledSize: defaultMarkerSize,
-        },
-        position: { lat: 49.8381391, lng: 24.0584291 },
-        text: 'Кінотеатр ім. Миколайчука',
-      },
-      {
-        type: 'restaurant',
-        icon: {
-          url: markersAdresses.restaurant,
-          scaledSize: defaultMarkerSize,
-        },
-        position: { lat: 49.8374302, lng: 24.0605258 },
-        text: 'Ресторан «Роден»',
-      },
-
-      {
-        type: 'nature',
-        icon: {
-          url: markersAdresses.activities,
-          scaledSize: defaultMarkerSize,
-        },
-        position: { lat: 49.8412704, lng: 24.0603914 },
-        text: 'Парк «Шевченківський Гай»',
+          position: { lat: 49.841193783121824, lng: 24.00146742286963 },
+          text: "Галицький районний суд міста Львова", 
+          type: "school",
+          icon: {
+              url: markersAdresses.school,
+              scaledSize: defaultMarkerSize,
+          },
       },
       {
-        type: 'supermarket',
-        icon: {
-          url: markersAdresses.supermarket,
-          scaledSize: defaultMarkerSize,
-        },
-        position: { lat: 49.8371949, lng: 24.0617739 },
-        text: '"Близенько"',
+          position: { lat: 49.841449386910845, lng: 24.00160684055064 },
+          text: "Сихівський районний суд міста Львова", 
+          type: "school",
+          icon: {
+              url: markersAdresses.school,
+              scaledSize: defaultMarkerSize,
+          },
+      },
+      {
+          position: { lat: 49.836414478853435, lng: 24.011374138034945 },
+          text: "НУ 'Львівська політехніка'", 
+          type: "school",
+          icon: {
+              url: markersAdresses.school,
+              scaledSize: defaultMarkerSize,
+          },
+      },
+      {
+          position: { lat: 49.84578687460336, lng: 24.00890617713479 },
+          text: "Сільпо ", 
+          type: "supermarket",
+          icon: {
+              url: markersAdresses.supermarket,
+              scaledSize: defaultMarkerSize,
+          },
+      },
+      {
+          position: { lat: 49.83844170258176, lng: 24.019693368657745 },
+          text: "Парк ім. Івана Франка", 
+          type: "activities",
+          icon: {
+              url: markersAdresses.activities,
+              scaledSize: defaultMarkerSize,
+          },
+      },
+      {
+          position: { lat: 49.83488734775688, lng: 24.012297323907337 },
+          text: "Львівська академічна гімназія при НУ «Львівська політехніка»", 
+          type: "school",
+          icon: {
+              url: markersAdresses.school,
+              scaledSize: defaultMarkerSize,
+          },
+      },
+      {
+          position: { lat: 49.84282269084846, lng: 23.99958154168597 },
+          text: "FitMe", 
+          type: "school",
+          icon: {
+              url: markersAdresses.school,
+              scaledSize: defaultMarkerSize,
+          },
+      },
+      {
+          position: { lat: 49.8436232735019, lng: 24.00447745209317 },
+          text: "Львівська школа Монтесорі", 
+          type: "school",
+          icon: {
+              url: markersAdresses.school,
+              scaledSize: defaultMarkerSize,
+          },
+      },
+      {
+          position: { lat: 49.84340574040089, lng: 23.999985652157793 },
+          text: "Дитячий садок №1", 
+          type: "garden",
+          icon: {
+              url: markersAdresses.garden,
+              scaledSize: defaultMarkerSize,
+          },
       },
       {
         type: 'main',
@@ -233,8 +274,8 @@ export default function googleMap() {
           url: markersAdresses.main,
           scaledSize: buildLogoSize,
         },
-        position: { lat: 49.839702, lng: 24.0609219 },
-        text: 'Hyde Park вул. Мучна, 32',
+        position: { lat: 49.84140317887458,  lng: 24.000367442154594, },
+        text: 'Harry - м. Львів, вул. Cтороженка 25А',
       },
     ];
 
@@ -242,6 +283,11 @@ export default function googleMap() {
       maxWidth: 300,
     });
     markersData.forEach(marker => {
+      console.log('container', container, container.getAttribute('[data-only-main-marker]'));
+      
+      if (container.getAttribute('data-only-main-marker') == 'true' && marker.type != 'main') {
+        return; // Пропускаємо, якщо це не головний маркер
+      }
       const mapMarker = new google.maps.Marker({
         map,
         category: marker.type,
@@ -268,7 +314,7 @@ console.log(mapSingle);
 if (mapSingle) {
   await loadGoogleMapsScript();
 
-  const singleMapCenter = { lat: 50.4542415, lng: 30.6057162 };
+  const singleMapCenter = { lat: 49.84140317887458,  lng: 24.000367442154594 };
   const singleMapZoom = 15;
   const singleMapText = 'РІЕЛ – відділ сервісу у Києві';
 

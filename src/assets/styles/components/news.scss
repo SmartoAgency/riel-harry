@@ -1,6 +1,9 @@
 .news {
     padding-bottom: var(--section-v-offset);
     padding-top: var(--section-v-offset);
+        position: relative;
+    z-index: 2;
+    background-color: var(--black);
 
     &__content {
         @include row-flex;

@@ -2,6 +2,9 @@
     padding-top: var(--section-v-offset);
     padding-bottom: var(--section-v-offset);
 
+    position: relative;
+    z-index: 2;
+    background-color: var(--black);
     &__title {
         margin-bottom: 40px;
 

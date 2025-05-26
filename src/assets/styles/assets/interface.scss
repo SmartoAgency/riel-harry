@@ -261,12 +261,13 @@ div:where(.swal2-container).swal2-noanimation.installment-popup-container {
     width: 42px;
     height: 42px;
     display: flex;
-    justify-content: flex-end;align-items: flex-start;
+    justify-content: center;align-items: center;
     svg {
       width: 18px;
       height: 18px;
     }
     @media (hover: hover) {
+      svg 
       &:hover {
         transform: rotate(90deg);
       }

@@ -2,6 +2,10 @@
     padding-top: var(--section-v-offset);
     padding-bottom: var(--section-v-offset);
     background-color: var(--green);
+    @include from(768px){
+        position: sticky;
+        top: 0;
+    }
 
     &--white {
         background-color: var(--white-2);
@@ -69,5 +73,8 @@
     }
     &--iframe &__img {
         padding-bottom: 52.5%;
+        @include to(767px){
+            padding-bottom: 100%;
+        }
     }
 }

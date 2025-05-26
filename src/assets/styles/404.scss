@@ -4,15 +4,26 @@
     display: flex;
     flex-wrap: wrap;
     background-color: var(--color-graphit);
-    @include to(1024px){
+    position: relative;
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    @include to(767){
         flex-direction: column-reverse;
         height: auto;
     }
-    @include to(600px){
-        height: calc(var(--vh, 1vh) * 100);
-    }
     &__img {
-        width: 50%;
+        width: 100%;
         background-color: #fff;
         padding: 70px;
         @include to(1024px){
@@ -45,23 +56,21 @@
         }
     }
     &__text {
-        width: 50%;
+        width: 100%;
         padding: pxWidthInVw(100);
         display: flex;
         flex-direction: column;
-        gap: 42px;
-        align-items: flex-start;justify-content: center;
+        gap: 32px;
+        align-items: center;
+        justify-content: center;
         color: var(--color-white);
-        @include to(1024px){
-            width: 100%;
+        &-description,
+        &-title {
+            max-width: 700px;
             text-align: center;
-            align-items: center;
-            height: calc(50vh - var(--header-h));
-            gap: 20px;
-            padding: 40px;
         }
-        @include to(600px){
-            padding: 20px var(--page-side-fields);
+        @include to(767px){
+            padding: 80px var(--page-side-fields) 20px var(--page-side-fields);
             flex-grow: 1;
         }
     }
@@ -69,5 +78,28 @@
         display: flex;
         align-items: center;
         gap: 8px;
+    }
+    &__button {
+        border-radius: 24px;
+        background: var(--green, #8DDBB0);
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.04);
+        display: flex;
+        height: 45px;
+        padding: 11px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;color: var(--black);
+        color: var(--black, #031915);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        @media (hover: hover) {
+            transition: .25s ease-in-out;
+            &:hover {
+                background: var(--green-2, #5BAB8F);
+            }
+        }
     }
 }

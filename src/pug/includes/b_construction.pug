@@ -1,3 +1,12 @@
+-
+  var constructionCards = [
+    { year: 2025, month: 2, image:'./assets/images/construction/card1.jpg', video: "https://www.youtube.com/embed/dQw4w9WgXcQ", },
+    { year: 2025, month: 2, image:'./assets/images/construction/card2.jpg', img: "./assets/images/construction/card2.jpg", },
+    { year: 2025, month: 1, image:'./assets/images/construction/card3.jpg', video: "https://www.youtube.com/embed/dQw4w9WgXcQ", },
+    { year: 2025, month: 1, image:'./assets/images/construction/card1.jpg', img: "./assets/images/construction/card1.jpg", },
+    { year: 2025, month: 1, image:'./assets/images/construction/card2.jpg', video: "https://www.youtube.com/embed/dQw4w9WgXcQ", },
+    { year: 2025, month: 1, image:'./assets/images/construction/card3.jpg', img: "./assets/images/construction/card3.jpg", }
+  ]
 .construction(id="construction")
   .container
     .construction__title.d-fz-70.mob-fz-32.color-green.text-uppercase(data-split-lines) Хід будівництва
@@ -116,23 +125,32 @@
         option(value="11") Листопад
         option(value="12") Грудень
       select.select(data-construction-filter="year" data-lenis-prevent)
-        option(value="2024") 2024
-        option(value="2023") 2023
-        option(value="2022") 2022
+        option(value="2025") 2025
     .construction__slider.swiper-container(data-construction-slider)
       .swiper-wrapper
-        each val in [1,2,3,4,5,6]
-          .swiper-slide.construction-card(data-construction-card data-year="2024" data-month=val)
-            .construction-card__top 12.#{val}.2024
-            .construction-card__image
-              .construction-card__image-wrap
-                if val%2 === 0
-                  .construction-card__video-play(data-popup-video="https://www.youtube.com/embed/dQw4w9WgXcQ")
-                    <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M63.9066 25.8299V46.3498C63.9066 49.7098 62.1066 52.83 59.1966 54.54L41.3766 64.8299C38.4666 66.5099 34.8666 66.5099 31.9266 64.8299L14.1066 54.54C11.1966 52.86 9.39661 49.7398 9.39661 46.3498V25.8299C9.39661 22.4699 11.1966 19.3498 14.1066 17.6398L31.9266 7.34984C34.8366 5.66984 38.4366 5.66984 41.3766 7.34984L59.1966 17.6398C62.1066 19.3498 63.9066 22.4399 63.9066 25.8299Z" fill="white" fill-opacity="0.24" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M29.9166 36.0896V32.4895C29.9166 27.8695 33.1867 25.9796 37.1767 28.2896L40.2966 30.0896L43.4166 31.8895C47.4066 34.1995 47.4066 37.9796 43.4166 40.2896L40.2966 42.0896L37.1767 43.8895C33.1867 46.1995 29.9166 44.3096 29.9166 39.6896V36.0896Z" fill="white" fill-opacity="0.24" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-
-
-                img(src="./assets/images/test-image.jpg", alt="")
+        each val in constructionCards
+          if val.img
+            .swiper-slide.construction-card(data-popup-video=val.img data-construction-card data-year=val.year data-month=val.month)
+              .construction-card__top 12.#{val.month}.#{val.year}
+              .construction-card__image
+                .construction-card__image-wrap
+                  if val.video
+                    .construction-card__video-play(data-popup-video="https://www.youtube.com/embed/dQw4w9WgXcQ")
+                      <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M63.9066 25.8299V46.3498C63.9066 49.7098 62.1066 52.83 59.1966 54.54L41.3766 64.8299C38.4666 66.5099 34.8666 66.5099 31.9266 64.8299L14.1066 54.54C11.1966 52.86 9.39661 49.7398 9.39661 46.3498V25.8299C9.39661 22.4699 11.1966 19.3498 14.1066 17.6398L31.9266 7.34984C34.8366 5.66984 38.4366 5.66984 41.3766 7.34984L59.1966 17.6398C62.1066 19.3498 63.9066 22.4399 63.9066 25.8299Z" fill="white" fill-opacity="0.24" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M29.9166 36.0896V32.4895C29.9166 27.8695 33.1867 25.9796 37.1767 28.2896L40.2966 30.0896L43.4166 31.8895C47.4066 34.1995 47.4066 37.9796 43.4166 40.2896L40.2966 42.0896L37.1767 43.8895C33.1867 46.1995 29.9166 44.3096 29.9166 39.6896V36.0896Z" fill="white" fill-opacity="0.24" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  img(src=val.image, alt="")
+          else
+            .swiper-slide.construction-card(data-construction-card data-year=val.year data-month=val.month)
+              .construction-card__top 12.#{val.month}.#{val.year}
+              .construction-card__image
+                .construction-card__image-wrap
+                  if val.video
+                    .construction-card__video-play(data-popup-video="https://www.youtube.com/embed/dQw4w9WgXcQ")
+                      <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M63.9066 25.8299V46.3498C63.9066 49.7098 62.1066 52.83 59.1966 54.54L41.3766 64.8299C38.4666 66.5099 34.8666 66.5099 31.9266 64.8299L14.1066 54.54C11.1966 52.86 9.39661 49.7398 9.39661 46.3498V25.8299C9.39661 22.4699 11.1966 19.3498 14.1066 17.6398L31.9266 7.34984C34.8366 5.66984 38.4366 5.66984 41.3766 7.34984L59.1966 17.6398C62.1066 19.3498 63.9066 22.4399 63.9066 25.8299Z" fill="white" fill-opacity="0.24" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M29.9166 36.0896V32.4895C29.9166 27.8695 33.1867 25.9796 37.1767 28.2896L40.2966 30.0896L43.4166 31.8895C47.4066 34.1995 47.4066 37.9796 43.4166 40.2896L40.2966 42.0896L37.1767 43.8895C33.1867 46.1995 29.9166 44.3096 29.9166 39.6896V36.0896Z" fill="white" fill-opacity="0.24" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  img(src=val.image, alt="")
           

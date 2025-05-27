@@ -274,22 +274,18 @@ function constructionFilterHandler(slider) {
 
   const filters = document.querySelectorAll('[data-construction-filter]');
 
-  // 1. Отримуємо дефолтні значення фільтрів
+
   const initialState = {};
   filters.forEach(filter => {
     const key = filter.dataset.constructionFilter;
 
     initialState[key] = filter.value;
-    console.log(initialState);
   });
 
-  // 2. Встановлюємо початковий стан фільтрів
   setConstructionFilter(initialState);
 
-  //  Вручну тригеримо фільтрацію одразу після ініціалізації
   applyFilter(initialState);
 
-  // 3. Вішаємо слухачі
   filters.forEach(filter => {
     filter.addEventListener('change', function(evt) {
       const key = evt.target.dataset.constructionFilter;
@@ -299,7 +295,9 @@ function constructionFilterHandler(slider) {
         [key]: value,
       };
       setConstructionFilter(newState);
-      applyFilter(newState); // 🔥 застосування фільтра при зміні
+      applyFilter(newState); 
+      console.log('New filter state:', newState);
+      
     });
   });
 
@@ -512,19 +510,26 @@ function constructionVideoHandler() {
 constructionVideoHandler();
 
 
+
 function openVideoPopup(videoUrl) {
-  Swal.fire({
-    html: `
-      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+  const checkIfImage = /\.(jpg|jpeg|png|gif)$/i.test(videoUrl);
+  const html = checkIfImage ? 
+    `<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <img src="${videoUrl}" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+        </img>
+      </div>`:
+    `<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
         <iframe src="${videoUrl}" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen 
                 style="position:absolute;top:0;left:0;width:100%;height:100%;">
         </iframe>
-      </div>
-    `,
-    width: window.innerWidth > 768 ? '80%' : '100%',
+      </div>`;
+  Swal.fire({
+    html: html,
+    width: window.innerWidth > 768 ? '100%' : '100%',
     showCloseButton: true,
     showConfirmButton: false,
     padding: '1rem',

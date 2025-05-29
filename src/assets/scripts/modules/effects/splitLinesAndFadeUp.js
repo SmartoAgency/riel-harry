@@ -1,5 +1,4 @@
 export default function splitToLinesAndFadeUp(selector, gsap) {
-    console.log(document.querySelectorAll(selector));
     
     document.querySelectorAll(selector).forEach(text => {
         let mathM = text.innerHTML.match(/<\s*(\w+\b)(?:(?!<\s*\/\s*\1\b)[\s\S])*<\s*\/\s*\1\s*>|\S+/g);

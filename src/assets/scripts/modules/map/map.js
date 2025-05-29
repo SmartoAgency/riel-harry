@@ -29,7 +29,6 @@ export default function googleMap() {
   }
 
   // const mapContainers = document.querySelectorAll('.map');
-  console.log(mapContainers);
   const observerOptions = {
     rootMargin: '0px',
     threshold: 0.1,
@@ -283,7 +282,6 @@ export default function googleMap() {
       maxWidth: 300,
     });
     markersData.forEach(marker => {
-      console.log('container', container, container.getAttribute('[data-only-main-marker]'));
       
       if (container.getAttribute('data-only-main-marker') == 'true' && marker.type != 'main') {
         return; // Пропускаємо, якщо це не головний маркер
@@ -310,7 +308,6 @@ export default function googleMap() {
   }
 }
 const mapSingle = document.querySelector('.map-simple');
-console.log(mapSingle);
 if (mapSingle) {
   await loadGoogleMapsScript();
 

@@ -76,10 +76,10 @@ function handleIframes(swiper) {
   swiper.slides.forEach((slide, index) => {
     const iframe = slide.querySelector('iframe');
     if (!iframe) return;
-    console.log(iframe);
+    // console.log(iframe);
     if (index === swiper.activeIndex) {
       // Активний слайд: додаємо src, якщо його ще немає
-      console.log(iframe.src, iframe.dataset.src);
+      // console.log(iframe.src, iframe.dataset.src);
 
       iframe.src = iframe.dataset.src;
     } else {
@@ -210,7 +210,6 @@ function gallerySliderHandler() {
       },
     },
   });
-  console.log('ININININ');
   
 
   // document.querySelector('[data-gallery-slider-next]').addEventListener('click', () => {
@@ -231,14 +230,14 @@ function gallerySliderHandler() {
     });
     const newGallery = images[value];
     const swiperWrapper = swiper.wrapperEl;
-    console.log('swiperWrapper', swiperWrapper, newGallery);
 
     swiper.wrapperEl.innerHTML = newGallery
       .map((image, index) => {
+        const url = document.documentElement.dataset.base ? document.documentElement.dataset.base + image.replace('./assets', '/assets') : image;
         return `
         <div class="swiper-slide">
           <div class="gallery__img">
-            <img src="${image}" alt="gallery image">
+            <img src="${url}" alt="gallery image">
           </div>
         </div>
       `;
@@ -300,7 +299,6 @@ function constructionFilterHandler(slider) {
       };
       setConstructionFilter(newState);
       applyFilter(newState); 
-      console.log('New filter state:', newState);
       
     });
   });

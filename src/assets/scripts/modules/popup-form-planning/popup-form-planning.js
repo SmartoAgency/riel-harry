@@ -11,7 +11,6 @@ export default function popupFormPlanning() {
 
     const ranges = initRanges();
     const visibility = popupVisibilityHandler();
-    console.log('popup-form-planning', document.querySelectorAll('[data-plannings-popup-checkbox]'));
     
     document.body.addEventListener('click', function checkboxCheckOnPopupOpen(evt){
         const el = evt.target.closest('[data-plannings-popup-checkbox]');
@@ -66,7 +65,6 @@ function initRanges() {
     let ranges = [];
     document.querySelectorAll('[data-form-planning-range]').forEach((el) => {
         const rangeSlider = $(el);
-        console.log('popup-form-planning');
         rangeSlider.ionRangeSlider({
             type: 'double',
             grid: false,

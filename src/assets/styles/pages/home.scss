@@ -20,6 +20,7 @@
             grid-template-areas: 
             "title title"
             "button button"; 
+            z-index: 2;
         }
     }
     &__content.ready-to-animate {
@@ -43,13 +44,14 @@
         position: absolute;
         bottom: calc(pxWidthInVw(71));
         right: calc(28% - 14px);
+        z-index: 3;
         @include to(767px){
             bottom: auto;
             top: calc(100% + 120vw);
             right: 50%;
             width: 112px;
             height: 112px;
-            transform: translate(50%, -50%);
+            transform: translate3d(50%, -50%, 1px);
         }
         svg {
             width: 100%;

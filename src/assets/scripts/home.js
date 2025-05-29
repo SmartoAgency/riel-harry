@@ -135,37 +135,38 @@ googleMap();
 function gallerySliderHandler() {
   const images = {
     renovation: [
-      './assets/images/gallery/2.1.jpg',
-      './assets/images/gallery/6.1.jpg',
-      './assets/images/gallery/7.1 1.jpg',
-      './assets/images/gallery/2.1.jpg',
-      './assets/images/gallery/6.1.jpg',
-      './assets/images/gallery/7.1 1.jpg',
+      './assets/images/gallery/renovation/13.1.jpg',  
+      './assets/images/gallery/renovation/20.1.jpg',  
+      './assets/images/gallery/renovation/21.1.jpg',  
+      './assets/images/gallery/renovation/22.1.jpg',
+
     ],
     sad: [
-      './assets/images/gallery/2.1.jpg',
-      './assets/images/gallery/6.1.jpg',
-      './assets/images/gallery/7.1 1.jpg',
+        './assets/images/gallery/sad/11.1.jpg',  
+        './assets/images/gallery/sad/12.1.jpg',  
+        './assets/images/gallery/sad/13.1.jpg',  
+        './assets/images/gallery/sad/14.1.jpg',  
+        './assets/images/gallery/sad/16.1.jpg',  
+        './assets/images/gallery/sad/17.1.jpg',
+
     ],
     club: [
-      './assets/images/gallery/2.1.jpg',
-      './assets/images/gallery/6.1.jpg',
-      './assets/images/gallery/7.1 1.jpg',
+      './assets/images/gallery/club/10.1.jpg',
+      './assets/images/gallery/club/11.1.jpg',
+      './assets/images/gallery/club/12.1.jpg',
     ],
     poverh: [
-      './assets/images/gallery/2.1.jpg',
-      './assets/images/gallery/6.1.jpg',
-      './assets/images/gallery/7.1 1.jpg',
+        './assets/images/gallery/poverh/1.1.jpg',  
+        './assets/images/gallery/poverh/4.1.jpg',  
+        './assets/images/gallery/poverh/6.1.jpg',  
+        './assets/images/gallery/poverh/7.1.jpg',
+
     ],
     parking: [
-      './assets/images/gallery/2.1.jpg',
-      './assets/images/gallery/6.1.jpg',
-      './assets/images/gallery/7.1 1.jpg',
+      './assets/images/gallery/parking/troy-t-YoGzQqqWZP0-unsplash.jpg',
     ],
     ukrytia: [
-      './assets/images/gallery/2.1.jpg',
-      './assets/images/gallery/6.1.jpg',
-      './assets/images/gallery/7.1 1.jpg',
+      './assets/images/gallery/ukrytia/63a6f8bb89a7ca1a804e496ce7aee41fd45cd451.jpg',
     ],
   };
 
@@ -187,7 +188,7 @@ function gallerySliderHandler() {
   // console.log('convertedTick', convertedTick);
 
   const swiper = new Swiper('[data-gallery-slider]', {
-    loop: true,
+    // loop: true,
     slidesPerView: 1,
     spaceBetween: 16,
     simulateTouch: false,
@@ -205,10 +206,12 @@ function gallerySliderHandler() {
     },
     on: {
       slideChangeTransitionEnd: swiper => {
-        swiper.update();
+        // swiper.update();
       },
     },
   });
+  console.log('ININININ');
+  
 
   // document.querySelector('[data-gallery-slider-next]').addEventListener('click', () => {
   //   swiper.setProgress(swiper.progress + convertedTick, 800);
@@ -228,7 +231,7 @@ function gallerySliderHandler() {
     });
     const newGallery = images[value];
     const swiperWrapper = swiper.wrapperEl;
-    console.log('swiperWrapper', swiperWrapper);
+    console.log('swiperWrapper', swiperWrapper, newGallery);
 
     swiper.wrapperEl.innerHTML = newGallery
       .map((image, index) => {
@@ -242,6 +245,7 @@ function gallerySliderHandler() {
       })
       .join('');
     swiper.update();
+    swiper.slideTo(0, 0); // Прокрутка до першого слайду
   });
   setGalleryFilter('renovation');
 }

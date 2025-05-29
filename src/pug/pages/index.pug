@@ -74,6 +74,8 @@ block content
     .container
       .front-screen__content.ready-to-animate
         h1.front-screen__title.color-green.d-fz-120.line-h-115.mob-fz-53.text-uppercase
+          a(href="http://riel.ua", target="_blank", rel="noopener noreferrer").front-screen__logo-desktop.show-on-desktop
+            include ../components/developer-logo.pug
           .show-on-desktop
             span.fw-900 Harry 
             | — дім з характером
@@ -87,7 +89,7 @@ block content
           span м. Львів, вул. Cтороженка 25А
         a(href="#plannings" type="button").button.front-screen__button
           span Обрати помешкання
-        a(href="http://riel.ua", target="_blank", rel="noopener noreferrer").front-screen__logo
+        a(href="http://riel.ua", target="_blank", rel="noopener noreferrer").front-screen__logo.show-on-mobile
           include ../components/developer-logo.pug
     img(src="./assets/images/front-screen-img.jpg", alt="", srcset="" data-front-screen-img).front-screen__img
     .front-screen__bottom-wrap.container

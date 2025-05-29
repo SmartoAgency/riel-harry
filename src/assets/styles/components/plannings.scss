@@ -1,5 +1,8 @@
 .plannings {
     padding-bottom: var(--section-v-offset);
+    @include from(767px){
+        padding-bottom: 160px;
+    }
     &__title {
         width: 100%;
     }

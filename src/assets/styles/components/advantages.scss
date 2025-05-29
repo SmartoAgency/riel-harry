@@ -1,7 +1,11 @@
 .advantages {
     padding-top: calc(var(--section-v-offset) * 1.27);
     padding-bottom: var(--section-v-offset);
-     
+    
+    @include from(1025px){
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
 
     @media screen and (max-width:767px) {
         padding-top: var(--section-v-offset);

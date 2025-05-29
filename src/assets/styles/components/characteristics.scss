@@ -10,7 +10,9 @@
 .characteristics {
     // padding-top: var(--section-v-offset);
     padding-bottom: calc(var(--section-v-offset) * 2);
-
+    @include to(767px){
+        padding-bottom: var(--section-v-offset);
+    }
     &__content {
         display: grid;
         grid-auto-columns: 1fr;

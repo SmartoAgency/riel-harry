@@ -4,6 +4,10 @@
         position: relative;
     z-index: 2;
     background-color: var(--black);
+    @include from(1025px){
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
     @include to(767px){
         padding-bottom: 349px;
         position: relative;

@@ -77,6 +77,10 @@
         transition: all 0.3s ease-in-out;
         &-subtitle {
             margin-bottom: 8px;
+            
+        }
+        &-subtitle--top-margin  {
+            margin-top: 16px;
         }
         &-top {
             display: flex;

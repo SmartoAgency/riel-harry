@@ -58,6 +58,19 @@
             height: 100%;
         }
     }
+    &__logo-desktop {
+        width: pxWidthInVw(180);
+        height: pxWidthInVw(180);
+        position: absolute;
+        bottom: 0;
+        left: 41.2vw;
+        z-index: 3;
+        transform: translateY(30%);
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
     &__button {
         grid-area: button;
         text-align: center;
@@ -110,6 +123,7 @@
             width: 100%;
             padding-left: 0;
             padding-right: 0;
+            padding-bottom: 0;
         }
         &-title {
             margin-bottom: 24px;

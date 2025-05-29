@@ -9,8 +9,15 @@
     position: relative;
     z-index: 2;
 
+    @include from(1025px){
+        padding-top: 160px;
+        padding-bottom: 0;
+    }
+
     @include to(767px){
         --slide-offset: 0;
+        padding-top: var(--section-v-offset);
+     
     }
 
     .swiper-container {
@@ -124,7 +131,7 @@
         display: block;
 
         @include to(767px) {
-            width: 100%;
+            width: calc(100% - var(--page-side-fields) * 2);
             font-size: 14px;
         }
     }

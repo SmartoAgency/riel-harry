@@ -4,6 +4,10 @@
         position: relative;
     z-index: 2;
     background-color: var(--black);
+    @include to(767px){
+        padding-top: 0;
+        padding-bottom: var(--section-v-offset);
+    }
 
     &__content {
         @include row-flex;

@@ -1,14 +1,14 @@
 .slides {
     padding-top: var(--section-v-offset);
     padding-bottom: var(--section-v-offset);
-    background-color: var(--green);
+    background-color: var(--white-2);
     @include from(768px){
         position: sticky;
         top: 0;
     }
-
+    
     &--white {
-        background-color: var(--white-2);
+        background-color: var(--green);
     }
 
     &__title {

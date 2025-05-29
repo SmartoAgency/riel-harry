@@ -3,6 +3,10 @@
     padding-top: var(--section-v-offset);
     padding-bottom: var(--section-v-offset);
     position: relative;
+    @include from(767px){
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
     @include from(768px){
         position: sticky;
         top: 0;

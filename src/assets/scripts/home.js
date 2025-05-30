@@ -36,7 +36,7 @@ function frontScreenHandler() {
   }, { once: true });
 }
 
-frontScreenHandler();
+// frontScreenHandler();
 
 const slider = new Swiper('[data-slides-slider]', {
   navigation: {
@@ -237,7 +237,7 @@ function gallerySliderHandler() {
         return `
         <div class="swiper-slide">
           <div class="gallery__img">
-            <img src="${url}" alt="gallery image">
+            <img src="${url}" alt="gallery image" loading="lazy" />
           </div>
         </div>
       `;
@@ -426,6 +426,7 @@ mobileNewsHandler();
 function aboutVideoHandler() {
   const playButton = document.querySelector('[data-play-video="about-video"]');
   const video = document.querySelector('[data-video="about-video"]');
+  if (!playButton || !video) return;
   
   const [ videoState, setVideo, subscribeVideo ] = useState(video.paused);
 
@@ -645,9 +646,16 @@ function constructionMobileAccordeonsHandler() {
     el.addEventListener('click', function(evt) {
       if (!evt.target.closest('[data-construction-table-group-open]') || window.innerWidth > 767) return;
       el.classList.toggle('js-collapsed');
-      
     });
   });
+
+  if (window.screen.width > 767) return;
+
+  document.querySelectorAll('[data-construction-table-group]').forEach((el, index) => {
+    if (index > 0) {
+      el.classList.add('js-collapsed');
+    }
+  })
 }
 
 constructionMobileAccordeonsHandler();

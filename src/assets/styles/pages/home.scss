@@ -24,14 +24,14 @@
         }
     }
     &__content.ready-to-animate {
-        opacity: 0;
+        // opacity: 0;
     }
     &__title {
         position: relative;
         grid-area: title;
     }
     &__img {
-        opacity: 0;
+        // opacity: 0;
         @include to(767px){
             height: 120vw;
             object-fit: cover;

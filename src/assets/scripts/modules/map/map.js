@@ -113,7 +113,7 @@ export default function googleMap() {
 
     const baseFolder = window.location.href.match(/localhost/)
       ? './assets/images/map/'
-      : './assets/images/map/';
+      : '/wp-content/themes/3d/assets/images/map/';
     const defaultMarkerSize =
       document.documentElement.clientWidth < 1600
         ? new google.maps.Size(23, 40)

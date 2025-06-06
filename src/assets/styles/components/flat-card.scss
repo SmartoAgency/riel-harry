@@ -119,14 +119,24 @@
         font-size: 16px;
         display: none;
         font-family: $default-font2;
+        justify-content: center;
+        @include to(767px){
+            display: flex;
+            font-family: $default-font;
+            box-shadow: none;
+        }
     }
     .button2 {
         font-family: $default-font2;
+        background-color: #F2FFE6;
     }
     &.active .button {
         display: block;
     }
     &.active &__hide-on-expand {
         display: none;
+    }
+    &__top1 {
+        width: 75%;
     }
 }

@@ -36,8 +36,8 @@
     &:hover {
         background: var(--white-2);
 
-        [fill] {
-            fill: #fff;
+        svg [fill] {
+            fill: var(--color);
         }
     }
 

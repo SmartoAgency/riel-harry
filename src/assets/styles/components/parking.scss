@@ -7,10 +7,10 @@
         padding-top: 120px;
         padding-bottom: 120px;
     }
-    @include from(768px){
-        position: sticky;
-        top: 0;
-    }
+    // @include from(768px){
+    //     position: sticky;
+    //     top: 0;
+    // }
     &__bg {
         position: absolute;
         left: 0;

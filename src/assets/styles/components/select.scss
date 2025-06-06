@@ -131,6 +131,9 @@
   &.is-open {
     --bg: var(--green-3);
     --color: var(--white-2);
+    .custom-select-panel {
+          max-height: 14.7em;
+    }
   }
   .custom-select-opener {
     border-radius: 24px;

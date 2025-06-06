@@ -76,7 +76,7 @@ export default function googleMap() {
 
     const filterItems = document.querySelectorAll('[data-marker]');
     const map = new google.maps.Map(container, {
-      zoom: 16,
+      zoom: 15,
       center,
       scrollwheel: false,
       navigationControl: false,
@@ -97,17 +97,39 @@ export default function googleMap() {
         }
       });
     };
-
+    document.querySelector('[data-category="all"]').classList.add('active');
     filterItems.forEach(item => {
       item.addEventListener('click', evt => {
         evt.stopImmediatePropagation();
         item.classList.toggle('active');
-        if (item.classList.contains('active')) {
+        if (!item.classList.contains('active')) {
+          item.style.pointerEvents = 'none';
+          setTimeout(() => {
+            item.style.pointerEvents = '';
+            
+          }, 2000);
+        }
+        if (item.classList.contains('active') && item.dataset.category !== 'all') {
           choosedCategories.add(item.dataset.category);
         } else {
           choosedCategories.delete(item.dataset.category);
         }
+        if (item.dataset.category === 'all' && item.classList.contains('active')) {
+          document.querySelectorAll('[data-marker]').forEach(el => {
+            el.classList.toggle('active', el === item);
+            if (el !== item) {
+              choosedCategories.delete(el.dataset.category);
+            }
+          });
+        } else if (item.dataset.category !== 'all') {
+          document.querySelector('[data-category="all"]').classList.remove('active');
+        }
+        
+        if (choosedCategories.size === 1) {
+          document.querySelector('[data-category="all"]').classList.add('active');
+        }
         filterMarkers(choosedCategories);
+        
       });
     });
 
@@ -118,13 +140,14 @@ export default function googleMap() {
       document.documentElement.clientWidth < 1600
         ? new google.maps.Size(23, 40)
         : new google.maps.Size(28, 45);
-    const buildLogoSize = new google.maps.Size(72, 185);
+    const buildLogoSize = new google.maps.Size(54,138);
 
     const markersAdresses = {
       main: `${baseFolder}main.svg`,
       mall: `${baseFolder}mall.svg`,
       park: `${baseFolder}park.svg`,
-      garden: `${baseFolder}garden.svg`,
+      garden: `${baseFolder}kinder.svg`,
+      admin: `${baseFolder}admin.svg`,
       nature: `${baseFolder}nature.svg`,
       activities: `${baseFolder}activities.svg`,
       pharmacy: `${baseFolder}pharmacy.svg`,
@@ -189,18 +212,18 @@ export default function googleMap() {
       {
           position: { lat: 49.841193783121824, lng: 24.00146742286963 },
           text: "Галицький районний суд міста Львова", 
-          type: "school",
+          type: "admin",
           icon: {
-              url: markersAdresses.school,
+              url: markersAdresses.admin,
               scaledSize: defaultMarkerSize,
           },
       },
       {
           position: { lat: 49.841449386910845, lng: 24.00160684055064 },
           text: "Сихівський районний суд міста Львова", 
-          type: "school",
+          type: "admin",
           icon: {
-              url: markersAdresses.school,
+              url: markersAdresses.admin,
               scaledSize: defaultMarkerSize,
           },
       },
@@ -225,9 +248,9 @@ export default function googleMap() {
       {
           position: { lat: 49.83844170258176, lng: 24.019693368657745 },
           text: "Парк ім. Івана Франка", 
-          type: "activities",
+          type: "nature",
           icon: {
-              url: markersAdresses.activities,
+              url: markersAdresses.nature,
               scaledSize: defaultMarkerSize,
           },
       },
@@ -243,9 +266,9 @@ export default function googleMap() {
       {
           position: { lat: 49.84282269084846, lng: 23.99958154168597 },
           text: "FitMe", 
-          type: "school",
+          type: "sport",
           icon: {
-              url: markersAdresses.school,
+              url: markersAdresses.sport,
               scaledSize: defaultMarkerSize,
           },
       },
@@ -312,7 +335,7 @@ if (mapSingle) {
   await loadGoogleMapsScript();
 
   const singleMapCenter = { lat: 49.84140317887458,  lng: 24.000367442154594 };
-  const singleMapZoom = 15;
+  const singleMapZoom = 14;
   const singleMapText = 'РІЕЛ – відділ сервісу у Києві';
 
   const singleMap = new google.maps.Map(mapSingle, {

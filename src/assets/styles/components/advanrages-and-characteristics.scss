@@ -12,6 +12,9 @@
         object-fit: cover;
         background-color: var(--black);
         z-index: 0;
+        @include to(1024px){
+            height: 100%;
+        }
         @include to(767px){
             display: none;
         }

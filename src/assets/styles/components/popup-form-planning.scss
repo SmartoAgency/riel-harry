@@ -135,7 +135,7 @@
         flex-direction: column;
         margin-top: pxInVh(55);
 
-        @include from(768px) {
+        @include from(1025px) {
             padding-right: pxWidthInVw(700);
         }
 
@@ -146,6 +146,9 @@
         [type="submit"] {
             margin-top: 12px;
             padding: 16px;
+            justify-content: center;
+            font-size: pxWidthInVw(21);
+            
 
             @include to(767px) {
                 font-size: 14px;
@@ -185,6 +188,7 @@
         --color: var(--black);
         position: relative;
         z-index: 2;
+        min-width: 225px;
         .custom-select-opener {
             padding-top: 8px;
             padding-bottom: 8px;

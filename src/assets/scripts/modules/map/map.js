@@ -18,7 +18,7 @@ export default function googleMap() {
       }
 
       const script = document.createElement('script');
-      let key = '';
+      let key = document.documentElement.dataset.key ? document.documentElement.dataset.key : '';
       script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&callback=initMap&language=ua`;
       script.async = true;
       script.defer = true;

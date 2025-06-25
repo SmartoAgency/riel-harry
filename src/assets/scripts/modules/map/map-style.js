@@ -1,6 +1,5 @@
 export default function mapStyle() {
   return [
-    [
       {
         "elementType": "geometry",
         "stylers": [
@@ -75,7 +74,5 @@ export default function mapStyle() {
           { "color": "#97e3b6" }
         ]
       }
-    ]
-
-  ];
+    ];
 }
